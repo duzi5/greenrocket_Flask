@@ -46,6 +46,7 @@ class UserModel(banco.Model):
         self.email = email
         self.aluno = aluno
 
+
     def delete_user(self):
         banco.session.delete(self)
         banco.session.commit() 

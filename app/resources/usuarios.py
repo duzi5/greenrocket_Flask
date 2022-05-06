@@ -14,10 +14,10 @@ class User(Resource):
         
 class Usuarios(Resource):
     argumentos = reqparse.RequestParser()
-    argumentos.add_argument('usuario')
-    argumentos.add_argument('nascimento')
-    argumentos.add_argument('email')
-    argumentos.add_argument('aluno')
+    argumentos.add_argument('usuario', type = str, required = True, help = "Esse campo não pode estar em branco")
+    argumentos.add_argument('nascimento', type = int, required =True, help = "Esse campo precisa ser preenchido" )
+    argumentos.add_argument('email', type = str, required = True, help = "Preencha seu email" )
+    argumentos.add_argument('aluno', type = bool, required = True, default = True)
     
     
     def get(self, nomedocidadao):   
@@ -34,7 +34,10 @@ class Usuarios(Resource):
            return "Já existe"
         dados = Usuarios.argumentos.parse_args()
         user = UserModel(**dados)
-        user.save_user() 
+        try:
+            user.save_user()
+        except: 
+            return{"Erro interno do servidor, tente criar novamente"}, 500 
         return user.json()
 
 
@@ -45,12 +48,38 @@ class Usuarios(Resource):
             user.update_user(**dados)
         else: 
             user = UserModel(**dados)
-            user.save_user()
+            try:
+                user.save_user()
+            except: 
+                return{"Erro interno do servidor, tente criar novamente"}, 500 
         return user.json()
 
 
     def delete(self, nomedocidadao):
         user = UserModel.find_user(nomedocidadao)
         if user: 
-            user.delete_user()
+            try: 
+                user.delete_user()
+            except:
+                return {"Erro do servidor, usuário não foi deletado"}, 500
         return "Usuário apagado"
+
+
+
+class UserRegister(Resource):
+    def post(self): 
+        atributos = reqparse.RequestParser()
+        atributos.add_argument('login', required = True, help = "È preciso informar o logim de seu usuário.")
+        atributos.add_argument('senha', required = True, help = "È preciso informar a senha.")
+        dados = atributos.parse_args()
+        if UserModel.find_by_login(dados['login']):
+            return "nome de usuário não está disponível."
+        else:
+            try: 
+                user = UserModel(**dados)
+                user.save_user()
+                return "Usuário criado com sucesso!"
+            except:
+                return "Erro no servidor, o usuário não foi adicionado."
+            
+
