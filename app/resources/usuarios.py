@@ -1,9 +1,6 @@
-import email
-from genericpath import exists
 from flask_restful import Resource, reqparse
 from Alchemy import banco
 from app.models.UserModel import UserModel
-
 
 
 class User(Resource):
@@ -13,12 +10,6 @@ class User(Resource):
 
         
 class Usuarios(Resource):
-    argumentos = reqparse.RequestParser()
-    argumentos.add_argument('usuario', type = str, required = True, help = "Esse campo não pode estar em branco")
-    argumentos.add_argument('nascimento', type = int, required =True, help = "Esse campo precisa ser preenchido" )
-    argumentos.add_argument('email', type = str, required = True, help = "Preencha seu email" )
-    argumentos.add_argument('aluno', type = bool, required = True, default = True)
-    
     
     def get(self, nomedocidadao):   
         user =  UserModel.find_user(nomedocidadao)
@@ -67,19 +58,41 @@ class Usuarios(Resource):
 
 
 class UserRegister(Resource):
-    def post(self): 
-        atributos = reqparse.RequestParser()
-        atributos.add_argument('login', required = True, help = "È preciso informar o logim de seu usuário.")
-        atributos.add_argument('senha', required = True, help = "È preciso informar a senha.")
-        dados = atributos.parse_args()
-        if UserModel.find_by_login(dados['login']):
+    def post(self):  
+        
+        argumentos = reqparse.RequestParser() 
+        argumentos.add_argument("usuario", required = True, help = "È preciso informar o logim de seu usuário.")
+        argumentos.add_argument("nascimento", type = int, help = "Esse campo precisa ser preenchido" )
+        argumentos.add_argument("email", type = str,  help = "Preencha seu email" )
+        argumentos.add_argument("aluno", type = str, default = True)
+        argumentos.add_argument("senha", required = True, help = "È preciso informar a senha.")
+        dados = argumentos.parse_args()
+        
+        
+        
+        if UserModel.find_user(dados["usuario"]):
             return "nome de usuário não está disponível."
         else:
             try: 
-                user = UserModel(**dados)
-                user.save_user()
-                return "Usuário criado com sucesso!"
+                cidadao = UserModel(**dados) 
+                cidadao.save_user()
+                return cidadao.json()                  
             except:
                 return "Erro no servidor, o usuário não foi adicionado."
             
 
+class UserLogin(Resource): 
+    def post(self):  
+        argumentos = reqparse.RequestParser() 
+        argumentos.add_argument("usuario", type = str, default = True)
+        argumentos.add_argument("senha", required = True, help = "È preciso informar a senha.")
+        dados = argumentos.parse_args()
+        usuario = UserModel.find_user(dados["usuario"])
+        if usuario and usuario.verifica_senha(dados['senha']):
+            return "Usuário logado!"
+        else: 
+            return "Erro inesperado!"
+
+
+        
+        

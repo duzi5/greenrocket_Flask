@@ -1,28 +1,34 @@
 from mailbox import NotEmptyError
 from Alchemy import banco
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 class UserModel(banco.Model):
     __tablename__ ='usuarios'
-    
-    usuario = banco.Column(banco.String, primary_key = True)
-    nascimento = banco.Column(banco.Integer)
+    __table_args__ = {'sqlite_autoincrement': True}
+    id = banco.Column(banco.Integer, primary_key = True)
+    usuario = banco.Column(banco.String)
+    nascimento = banco.Column(banco.String)
     email = banco.Column(banco.String(80))
     aluno = banco.Column(banco.String)
-
-    def __init__(self, usuario, nascimento, email, aluno):
+    senha_hash = banco.Column(banco.String(128))
+    
+    def __init__(self, usuario, nascimento, email, aluno, senha):
         self.usuario =  usuario
         self.nascimento = nascimento 
         self.email = email
         self.aluno = aluno
+        self.senha_hash = generate_password_hash(senha)
 
    
     def json(self):
         return{
-            'usuario': self.usuario,
-            'nascimento': self.nascimento,
-            'email' : self.email,
-            'aluno' : self.aluno
+            "id": self.id,
+            "usuario": self.usuario,
+            "nascimento": self.nascimento,
+            "email" : self.email,
+            "aluno" : self.aluno,
+            "senha" : self.senha_hash
         }
     
     
@@ -40,14 +46,17 @@ class UserModel(banco.Model):
         banco.session.commit() 
 
 
-    def update_user(self, usuario, nascimento, email, aluno): 
+    def update_user(self, usuario, nascimento, email, aluno, senha_hash): 
         self.usuario = usuario
         self.nascimento = nascimento
         self.email = email
         self.aluno = aluno
-
+         
 
     def delete_user(self):
         banco.session.delete(self)
         banco.session.commit() 
 
+
+    def verifica_senha(self, senha):
+        return check_password_hash(self.senha_hash, senha)
