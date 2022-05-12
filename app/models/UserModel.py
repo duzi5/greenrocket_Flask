@@ -1,9 +1,11 @@
 from mailbox import NotEmptyError
 from Alchemy import banco
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import UserMixin
 
 
-class UserModel(banco.Model):
+
+class UserModel(banco.Model, UserMixin):
     __tablename__ ='usuarios'
     __table_args__ = {'sqlite_autoincrement': True}
     id = banco.Column(banco.Integer, primary_key = True)
@@ -19,8 +21,10 @@ class UserModel(banco.Model):
         self.email = email
         self.aluno = aluno
         self.senha_hash = generate_password_hash(senha)
-
-   
+ 
+    
+    
+    
     def json(self):
         return{
             "id": self.id,
@@ -60,3 +64,8 @@ class UserModel(banco.Model):
 
     def verifica_senha(self, senha):
         return check_password_hash(self.senha_hash, senha)
+
+  
+
+ 
+  
