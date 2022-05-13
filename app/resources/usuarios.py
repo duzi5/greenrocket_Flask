@@ -22,16 +22,9 @@ class Usuarios(Resource):
     argumentos.add_argument("aluno", type = str, default = True)
     argumentos.add_argument("senha", required = True, help = "È preciso informar a senha.")
 
-        
-    
-    
-    
+
     
     def get(self, nomedocidadao):   
-       
-        connection = psycopg2.connect(user="", password="", host="", port="", database="" )
-        curso = connection.cursor
-       
         user =  UserModel.find_user(nomedocidadao)
         if user: 
             return user.json()
