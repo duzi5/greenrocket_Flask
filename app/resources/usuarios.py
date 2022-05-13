@@ -29,8 +29,8 @@ class Usuarios(Resource):
     
     def get(self, nomedocidadao):   
        
-       connection = psycopg2.connect(user="", password="", host="", port="", database="" )
-       curso = connection.cursor
+        connection = psycopg2.connect(user="", password="", host="", port="", database="" )
+        curso = connection.cursor
        
         user =  UserModel.find_user(nomedocidadao)
         if user: 
