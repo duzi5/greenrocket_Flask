@@ -31,11 +31,12 @@ api = Api(app)
 api.add_resource(User, '/users')
 api.add_resource(Usuarios, '/users/<nomedocidadao>')
 api.add_resource(UserRegister, '/cadastro')
-
-
 api.add_resource(UserLogin, '/login')
 
 
+@app.route("/")
+def index():
+    return "Página carregada com sucesso"
 
 
 
