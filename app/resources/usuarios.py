@@ -2,6 +2,8 @@ from flask_restful import Resource, reqparse
 from Alchemy import banco
 from app.models.UserModel import UserModel
 from flask_login import login_user, login_required, login_manager
+import psycopg2
+
 
 class User(Resource):
     
@@ -26,6 +28,10 @@ class Usuarios(Resource):
     
     
     def get(self, nomedocidadao):   
+       
+       connection = psycopg2.connect(user="", password="", host="", port="", database="" )
+       curso = connection.cursor
+       
         user =  UserModel.find_user(nomedocidadao)
         if user: 
             return user.json()
@@ -33,7 +39,7 @@ class Usuarios(Resource):
             return "Não existe!"
     
     def post(self, nomedocidadao):
-        
+     
     
         
         
