@@ -7,7 +7,7 @@ import psycopg2
 
 class User(Resource):
     
-    @login_required
+   
     def get(self):
         return {'usuarios': [hotel.json() for hotel in UserModel.query.all()]}      
 
@@ -47,7 +47,7 @@ class Usuarios(Resource):
             return{"Erro interno do servidor, tente criar novamente"}, 500 
         return user.json()
 
-    @login_required
+
     def put(self, nomedocidadao): 
         
         argumentos = reqparse.RequestParser() 
@@ -73,7 +73,7 @@ class Usuarios(Resource):
         return user.json()
 
 
-    @login_required
+
     def delete(self, nomedocidadao):
         user = UserModel.find_user(nomedocidadao)
         if user: 
