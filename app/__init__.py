@@ -3,14 +3,14 @@ from flask import Blueprint, Flask
 from app.resources.usuarios import User, Usuarios, UserRegister, UserLogin
 from flask_login import LoginManager
 from app.models import UserModel
-from Alchemy import banco
-from run import create_app
+
+
 
 
 
 app = Flask(__name__)
-def inicia_banco():
-    banco.init_app(app)
+
+ 
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://dfkzaikcvapuga:53a950cc262dfa0976e626087e8cfc978bdc9295fcffa70acee3a06f662d4c28@ec2-52-200-215-149.compute-1.amazonaws.com:5432/d9utdggln4gbf6'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
