@@ -1,8 +1,7 @@
+from Alchemy import banco
+from app import app
 
-
-if __name__ == "__main__":
-    from Alchemy import banco
-    from app import app
+if __name__ == "__main__": 
     banco.init_app(app)
     app.run()
 
