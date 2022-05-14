@@ -20,7 +20,7 @@ class Usuarios(Resource):
     argumentos.add_argument("nascimento", type = int, help = "Esse campo precisa ser preenchido" )
     argumentos.add_argument("email", type = str,  help = "Preencha seu email" )
     argumentos.add_argument("aluno", type = str, default = True)
-    argumentos.add_argument("senha", required = True, help = "È preciso informar a senha.")
+    argumentos.add_argument("senha", type = str, required = True, help = "È preciso informar a senha.")
 
 
     
@@ -32,10 +32,6 @@ class Usuarios(Resource):
             return "Não existe!"
     
     def post(self, nomedocidadao):
-     
-    
-        
-        
         user = UserModel.find_user(nomedocidadao)
         if user:
            return "Já existe"
@@ -49,7 +45,6 @@ class Usuarios(Resource):
 
 
     def put(self, nomedocidadao): 
-        
         argumentos = reqparse.RequestParser() 
         argumentos.add_argument("usuario", required = True, help = "È preciso informar o logim de seu usuário.")
         argumentos.add_argument("nascimento", type = int, help = "Esse campo precisa ser preenchido" )
