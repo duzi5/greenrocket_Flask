@@ -3,7 +3,7 @@ from flask import Blueprint, Flask
 from app.resources.usuarios import User, Usuarios, UserRegister, UserLogin
 from flask_login import LoginManager
 from app.models import UserModel
-
+from Alchemy import banco
 
 
 
