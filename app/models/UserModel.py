@@ -7,7 +7,6 @@ from flask_login import UserMixin
 
 class UserModel(banco.Model, UserMixin):
     __tablename__ ='usuarios'
-    __table_args__ = {'sqlite_autoincrement': True}
     id = banco.Column(banco.Integer, primary_key = True)
     usuario = banco.Column(banco.String)
     nascimento = banco.Column(banco.String)
