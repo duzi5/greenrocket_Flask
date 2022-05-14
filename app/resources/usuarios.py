@@ -92,8 +92,8 @@ class UserRegister(Resource):
         argumentos.add_argument("usuario", required = True, help = "È preciso informar o logim de seu usuário.")
         argumentos.add_argument("nascimento", type = int, help = "Esse campo precisa ser preenchido" )
         argumentos.add_argument("email", type = str,  help = "Preencha seu email" )
-        argumentos.add_argument("aluno", type = str, default = True)
-        argumentos.add_argument("senha", required = True, help = "È preciso informar a senha.")
+        argumentos.add_argument("aluno", type = str)
+        argumentos.add_argument("senha", type = str, required = True, help = "È preciso informar a senha.")
         dados = argumentos.parse_args()
         
         
