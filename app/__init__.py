@@ -1,9 +1,11 @@
+from ensurepip import bootstrap
 from flask_restful import Api
-from flask import Blueprint, Flask
+from flask import Blueprint, Flask, render_template
 from app.resources.usuarios import User, Usuarios, UserRegister, UserLogin
 from flask_login import LoginManager
 from app.models import UserModel
 from Alchemy import banco
+from flask_bootstrap import Bootstrap
 
 
 
@@ -19,6 +21,8 @@ app.config['SECRET_KEY'] = "nada"
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
+
+bootstrap = Bootstrap(app)
 
 
 @login_manager.user_loader
@@ -39,10 +43,11 @@ api.add_resource(UserLogin, '/login')
 def index():
     return "Página carregada com sucesso"
 
-
+@app.route("/cadastro_form")
+def cadastro():    
+    return render_template("cadastro.html")
 
 
 
 
 # from app.controllers import defaults
-
