@@ -3,3 +3,4 @@ flask-sqlALCHEMY
 FLASK-LOGIN
 FLASK-RESTFUL
 gunicorn
+psycopg2
