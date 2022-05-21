@@ -1,4 +1,4 @@
-Flask-Manager
+
 sql-ALCHEMY
 FLASK-LOGIN
 FLASK-RESTFUL
