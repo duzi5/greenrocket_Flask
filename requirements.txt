@@ -2,3 +2,4 @@
 flask-sqlALCHEMY
 FLASK-LOGIN
 FLASK-RESTFUL
+gunicorn
