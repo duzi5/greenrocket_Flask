@@ -4,3 +4,4 @@ FLASK-LOGIN
 FLASK-RESTFUL
 gunicorn
 psycopg2
+flask-bootstrap
