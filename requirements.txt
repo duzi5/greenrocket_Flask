@@ -1,3 +1,4 @@
+alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
 anaconda-client @ file:///opt/concourse/worker/volumes/live/866d4dd0-ff5b-4d0b-718d-0267a3b10e06/volume/anaconda-client_1635342573767/work
 anaconda-navigator==2.1.1
 anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1626085644852/work
@@ -23,7 +24,7 @@ backports.functools-lru-cache @ file:///tmp/build/80754af9/backports.functools_l
 backports.shutil-get-terminal-size @ file:///tmp/build/80754af9/backports.shutil_get_terminal_size_1608222128777/work
 backports.tempfile @ file:///home/linux1/recipes/ci/backports.tempfile_1610991236607/work
 backports.weakref==1.0.post1
-beautifulsoup4 @ file:///tmp/build/80754af9/beautifulsoup4_1631874778482/work
+beautifulsoup4==4.11.1
 binaryornot @ file:///tmp/build/80754af9/binaryornot_1617751525010/work
 bitarray @ file:///opt/concourse/worker/volumes/live/8f2b2fa2-f7cd-4343-4d8f-3cc38b632e33/volume/bitarray_1629132852828/work
 bkcharts==0.2
@@ -43,7 +44,7 @@ click==8.1.3
 cloudpickle @ file:///tmp/build/80754af9/cloudpickle_1632508026186/work
 clyent==1.2.2
 colorama @ file:///tmp/build/80754af9/colorama_1607707115595/work
-conda==4.10.3
+conda==4.12.0
 conda-build==3.21.5
 conda-content-trust @ file:///tmp/build/80754af9/conda-content-trust_1617045594566/work
 conda-pack @ file:///tmp/build/80754af9/conda-pack_1611163042455/work
@@ -232,7 +233,7 @@ sniffio @ file:///opt/concourse/worker/volumes/live/38ca9e9e-09d1-4d43-5a0f-b546
 snowballstemmer @ file:///tmp/build/80754af9/snowballstemmer_1611258885636/work
 sortedcollections @ file:///tmp/build/80754af9/sortedcollections_1611172717284/work
 sortedcontainers @ file:///tmp/build/80754af9/sortedcontainers_1623949099177/work
-soupsieve @ file:///tmp/build/80754af9/soupsieve_1616183228191/work
+soupsieve==2.3.2.post1
 Sphinx==4.2.0
 sphinxcontrib-applehelp @ file:///home/ktietz/src/ci/sphinxcontrib-applehelp_1611920841464/work
 sphinxcontrib-devhelp @ file:///home/ktietz/src/ci/sphinxcontrib-devhelp_1611920923094/work
