@@ -41,7 +41,7 @@ api.add_resource(UserLogin, '/login')
 
 @app.route("/")
 def index():
-    return "Página carregada com sucesso"
+    return render_template("index.html")
 
 @app.route("/cadastro_form")
 def cadastro():    
