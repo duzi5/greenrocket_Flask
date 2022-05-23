@@ -20,8 +20,8 @@ body{
     height: 100%;
     width: 100%;
     display:flex;
-    background: rgb(0,42,254);
-    background: linear-gradient(0deg, rgba(0,42,254,1) 0%, rgba(5,43,254,1) 30%, rgba(255,255,255,1) 35%, rgba(252,252,252,1) 67%, rgba(231,12,12,1) 72%, rgba(246,0,50,1) 100%);
+    background: rgb(241,105,165);
+    background: linear-gradient(0deg, rgba(241,105,165,1) 0%, rgba(148,187,233,1) 100%);
 }
 .centro {
     height: 300px;
