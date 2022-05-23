@@ -1,15 +1,27 @@
+body{
+    border: 0%;
+    margin: 0%;
+
+}
+
+
 .container{
     height: 100vh;
     width: 100%;
     background-color: rgb(136, 84, 16);
     display: flex;
+    border: 0%;
+    margin: 0%;
 }
 
 .row{ 
+    border: 0%;
+    margin: 0%;
     height: 100%;
     width: 100%;
-    background-color: azure;
     display:flex;
+    background: rgb(28,226,102);
+    background: radial-gradient(circle, rgba(28,226,102,1) 0%, rgba(43,94,78,1) 39%, rgba(69,93,37,1) 52%, rgba(0,228,255,1) 54%, rgba(216,87,39,1) 61%, rgba(161,66,94,1) 71%, rgba(122,52,133,1) 78%, rgba(0,6,255,1) 100%);
 }
 
 .centro {
