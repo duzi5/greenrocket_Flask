@@ -1,9 +1,11 @@
 {% extends "bootstrap/base.html" %}
 
-{% block header %}
+{% block styles %}
 
-<link rel="stylesheet" href="styles.css">
-
+<link rel="stylesheet" href="{{ url_for('.static', filename='styles.css')   }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
 
 {% endblock %}
@@ -15,7 +17,8 @@
 <div class="container">
     <div class="row">
         <div class="centro col-sm-5">
-
+            <h2 class="green">GreenRocket
+            </h2>
         </div>
     </div>
 </div>

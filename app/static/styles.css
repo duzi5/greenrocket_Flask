@@ -1,5 +1,35 @@
 .container{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(136, 84, 16);
+    display: flex;
+}
+
+.row{ 
+    height: 100%;
+    width: 100%;
+    background-color: azure;
+    display:flex;
+}
+
+.centro {
     height: 300px;
-    width: 700px;
-    background-color: antiquewhite;
+    width: 300px;
+    background-color: rgb(174, 230, 211);
+    margin: auto;
+    display: flex;
+    border-radius: 50%;
+    border-style:solid;
+    border-color: rgb(77, 117, 17);
+    border-width: 10px;
+    
+}
+
+.green{
+    color: rgb(77, 117, 17);
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    text-align: center;
+    margin:auto;
+
 }
