@@ -20,10 +20,9 @@ body{
     height: 100%;
     width: 100%;
     display:flex;
-    background: rgb(28,226,102);
-    background: radial-gradient(circle, rgba(28,226,102,1) 0%, rgba(43,94,78,1) 39%, rgba(69,93,37,1) 52%, rgba(0,228,255,1) 54%, rgba(216,87,39,1) 61%, rgba(161,66,94,1) 71%, rgba(122,52,133,1) 78%, rgba(0,6,255,1) 100%);
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(97,45,253,1) 100%);
 }
-
 .centro {
     height: 300px;
     width: 300px;
