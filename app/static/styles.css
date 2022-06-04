@@ -21,6 +21,7 @@ body{
     height: 90vh;
     width: 100vw;
     overflow:hidden;
+   
  
 }
 
@@ -35,8 +36,8 @@ body{
 
 .logo img{
     margin-top: 50px;
-    width: 400px;
-    height: 200px;
+    width: 20rem;
+    height: 10rem;
     z-index: 20;
     
 }
@@ -52,7 +53,7 @@ button{
     color: aliceblue;
     border-radius: 5px;
     border: solid rgb(26, 99, 4) 3px;
-    height: 50px;
+    height: 50%;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 16px 48px -16px rgba(0,0,0,0); 
     box-shadow: 0px 10px 13px -7px #000000, 5px 16px 48px -16px rgba(0,0,0,0);
 }
@@ -79,12 +80,7 @@ button{
     box-shadow: inset 0px 10px 36px 1px rgb(11, 12, 11);
     background-color: rgb(217, 227, 255);
 }
-button{
-    -webkit-box-shadow: inset 0px 10px 36px 1px rgb(20, 22, 21);
-    -moz-box-shadow: inset 0px 10px 36px 1px rgb(13, 14, 13);
-    box-shadow: inset 0px 10px 36px 1px rgb(11, 12, 11);
-    background-color: rgb(217, 227, 255);
-}
+
 
 .nav-link{ 
     
@@ -93,7 +89,7 @@ button{
     border-radius: 50%;
     height: 55px;
     width: 55px;
-    font-size: 2rem;
+    font-size: 40px;
     color: rgb(183, 212, 235);
 }
 
@@ -103,28 +99,33 @@ button{
 }
 
 .texto{
-    max-width: 300px;
-    top: 70%;
-    left: 28%;
-    position: absolute;
-    z-index: 4;
+    
+  width: 15%;
+  position: absolute;
+  bottom: 15%;
+  left: 35%;
+    
 
 }
 
 .texto p{
     font-family: 'Oswald', sans-serif;
     font-size: 1.4rem;
+  
 
 }
 
 
 .menina{
    
-    z-index: 1;
-    max-height: 900px;
+    
+    max-height: 60em;
+    max-width: 25em;
     position: absolute;
     bottom: 0%;
     right: 10%;
+   
+    
 
   
             
@@ -132,12 +133,129 @@ button{
 
 
 
-.meiuca{
-    max-width: 1200px;
-    margin: auto;
+.meio{
+    min-height: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
     overflow-y: hidden;
     overflow-x:hidden;
+    position: relative;
+    border: solid 1px black;
  
 }
 
 
+@media screen and (max-width: 900px){
+
+ 
+
+    .linha0{
+        height: 60px;
+    }
+
+    .menina{
+        height: 500px;
+    }
+    .nav-link{
+        font-size: 10px;
+    }
+    .texto{
+        width: 300px;;
+    }
+
+}
+
+
+@media screen and (max-width: 575px){
+
+
+
+    .linha0{
+        height: 40px;
+    }
+
+    .menina{
+        height: 400px;
+    }
+    .nav-link{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (min-width: 1000px){
+
+    .texto{
+        left: 10%;
+        width: 300px;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 640px){
+
+    .texto{
+        left: 7%;
+        width: 35%;
+        top: 40%;
+    }
+
+
+
+}
+
+@media screen and (max-width: 700px){
+
+    .texto{
+        left: 6%;
+        width: 40%;
+    }
+
+
+
+}
+
+@media screen and (max-width: 380px){
+
+    .texto{
+        left: 3%;
+        width: 50%;
+        top:25%;
+    }
+    .texto p{ 
+        font-size: 10px;
+    }
+
+    .logo img{
+        width: 200px;
+        height: 100px;
+
+    }
+    .menina{ 
+        right: 2%;
+    }
+
+}
+
+
+@media screen and (max-width: 780px){
+
+    .texto{
+        left: 6%;
+        width: 40%;
+    }
+
+}
+
+
+@media screen and (max-width: 1000px){
+
+        .texto{
+            left: 6%;
+            width: 40%;
+        }
+}

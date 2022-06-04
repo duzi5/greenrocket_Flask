@@ -6,6 +6,7 @@ from flask_login import LoginManager
 from app.models import UserModel
 from Alchemy import banco
 from flask_bootstrap import Bootstrap
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 
 

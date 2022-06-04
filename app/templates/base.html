@@ -1,7 +1,8 @@
 {% extends "bootstrap/base.html" %}
 
 {% block styles %}
-
+<link href="{{ url_for('static', filename='css/style.scss.css') }}"
+      rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="{{ url_for('.static', filename='styles.css')   }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
