@@ -11,7 +11,7 @@ body{
     height: 80px;
     overflow: hidden;
     position: fixed;
-    
+    z-index: 4; 
 }
 
 .linha1{
@@ -35,7 +35,9 @@ body{
   
     
 }
-
+h5{
+    margin: 10px;
+}
 
 .logo img{
     margin-top: 50px;
