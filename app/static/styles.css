@@ -1,6 +1,7 @@
 body{
     border: 0%;
     margin: 0%;
+    width: 100vw;
     background-color: #222222;
     
 
@@ -14,16 +15,16 @@ body{
 
 .linha1{
     background-color: rgb(217, 227, 255);
-    -webkit-box-shadow: inset 0px 10px 36px 1px rgb(20, 22, 21);
-    -moz-box-shadow: inset 0px 10px 36px 1px rgb(13, 14, 13);
-    box-shadow: inset 0px 10px 36px 1px rgb(11, 12, 11);
+    -webkit-box-shadow: inset 0px 10px 0px 0px rgb(20, 22, 21);
+    -moz-box-shadow: inset 0px 10px 0px 0px rgb(13, 14, 13);
+    box-shadow: inset 0px 10px 30px 0px rgb(11, 12, 11);
     min-height: 600px;
     max-height: 833px;
     height: 90vh;
     width: 100vw;
     overflow:hidden;
-   
- 
+    border-top: 4px green dotted;
+    border-bottom: 4px green dotted;
 }
 
 
@@ -53,7 +54,7 @@ button{
     background-color: rgb(72, 160, 31);
     color: aliceblue;
     border-radius: 5px;
-    border: solid rgb(26, 99, 4) 3px;
+
     height: 50%;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 16px 48px -16px rgba(0,0,0,0); 
     box-shadow: 0px 10px 13px -7px #000000, 5px 16px 48px -16px rgba(0,0,0,0);
@@ -61,15 +62,79 @@ button{
 }
 
 .linha2{
-    width: 100vw;
-    background-color: #222222;
-    position: absolute; 
-    background-color: rgb(217, 227, 255);
-    -webkit-box-shadow: inset 0px 10px 36px 1px rgb(20, 22, 21);
-    -moz-box-shadow: inset 0px 10px 36px 1px rgb(13, 14, 13);
-    box-shadow: inset 0px 10px 36px 1px rgb(11, 12, 11);
+    width: 100%;
+    background: rgb(216, 255, 255);
+
+    min-height: 600px; 
+    color: azure;
+    max-height: fit-content;
+    
+    
+}
+
+.meio2 p{
+    text-align: justify;
+}
+
+.meio2{
+    
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    justify-content: center;
+
+    
+
+    
+
 
 }
+.card{
+
+    height: 700px;
+    background-color: #d7d7d8;
+    color: #000000;
+    margin-left: 0px;
+    justify-self: center;
+    max-width: 90vw;
+    -webkit-box-shadow: 5px -2px 37px -7px rgba(0,0,0,0.52); 
+    box-shadow: 5px -2px 37px -7px rgba(0,0,0,0.52);
+}
+
+.row2{
+    min-height: fit-content;
+  
+    max-width: 1200px;
+    margin:0;
+
+
+    max-width: 1200px;
+    justify-content: space-around;
+   
+    justify-self: center;
+}
+
+.titulo2{
+    min-height: 100px;
+    color: black;
+    width: 100%;
+    max-width: 1200px;
+   }
+
+
+
+.meio2 .card img{
+    max-height: 30rem;
+    min-height: 20rem;
+    overflow: cover;
+ 
+}
+.meio p{
+    color: black;
+   
+}
+
 
 
 .navbar{
@@ -112,8 +177,8 @@ button{
 }
 
 .texto p{
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.4rem;
+  
+    font-size: 1.2rem;
   
 
 }
@@ -149,13 +214,76 @@ button{
  
 }
 
+@media screen and (max-width: 380px){
+    
+    .texto{
+        left: 3%;
+        width: 50%;
+        top:25%;
+    }
+    .texto p{ 
+        font-size: 10px;
+    }
+    
+    .logo img{
+        width: 200px;
+        height: 100px;
+        
+    }
+    .menina{ 
+        right: 2%;
+    }
+    
+    .card{
+        width: 80vw;
+        margin: auto;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 575px){
+    
+    .menina{
+        height: 400px;
+    }
+    
+}
+
+
+@media screen and (max-width: 640px){
+    
+    .texto{
+        left: 7%;
+        width: 35%;
+        top: 40%;
+    }
+
+    
+}
+
+
+
+@media screen and (max-width: 700px){
+    
+    .texto{
+        left: 6%;
+        width: 40%;
+    }
+    
+}
+
+@media screen and (max-width: 780px){
+    
+    .texto{
+        left: 6%;
+        width: 40%;
+    }
+    
+}
 
 @media screen and (max-width: 900px){
-
- 
-
-  
-
     .menina{
         height: 500px;
     }
@@ -164,21 +292,15 @@ button{
         width: 300px;;
     }
 
-}
-
-
-@media screen and (max-width: 575px){
-
-
-
-
-
-    .menina{
-        height: 400px;
+    
+    @media screen and (max-width: 1000px){
+    
+            .texto{
+                left: 6%;
+                width: 40%;
+            }
     }
-
 }
-
 @media screen and (min-width: 1000px){
 
     .texto{
@@ -190,67 +312,17 @@ button{
 
 }
 
+@media screen and (min-width: 1320px){
 
-@media screen and (max-width: 640px){
-
-    .texto{
-        left: 7%;
-        width: 35%;
-        top: 40%;
-    }
-
-
-
-}
-
-@media screen and (max-width: 700px){
-
-    .texto{
-        left: 6%;
-        width: 40%;
-    }
-
-
-
-}
-
-@media screen and (max-width: 380px){
-
-    .texto{
-        left: 3%;
-        width: 50%;
-        top:25%;
-    }
-    .texto p{ 
-        font-size: 10px;
-    }
-
-    .logo img{
-        width: 200px;
-        height: 100px;
-
-    }
-    .menina{ 
-        right: 2%;
-    }
-
+   
 }
 
 
-@media screen and (max-width: 780px){
 
-    .texto{
-        left: 6%;
-        width: 40%;
-    }
+
+
+.card-texto{
+    overflow-y: scroll; 
 
 }
 
-
-@media screen and (max-width: 1000px){
-
-        .texto{
-            left: 6%;
-            width: 40%;
-        }
-}
