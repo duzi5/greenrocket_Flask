@@ -42,7 +42,7 @@ api.add_resource(UserLogin, '/login')
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index2.html")
 
 @app.route("/cadastro_form")
 def cadastro():    

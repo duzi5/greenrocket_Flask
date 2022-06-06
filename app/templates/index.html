@@ -4,102 +4,124 @@
 
 {% block content %}
 
-<div class="body">
-    <div class="linha0 container-fluid ">
-        <nav class="navbar navbar-expand ">
-            <div class="container">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">Menu</span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-house"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-people-group"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-helmet-safety"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                  </li>
-                </ul>
+
+  <div class="corpo container-fluid justify-content-center">
+    <div class="linha0 container-fluid">
+      <nav class="navbar navbar-expand ">
+          <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">Menu</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-house"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-people-group"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-helmet-safety"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+  </div>
+  
+  <div class="linha1 linha container-fluid ">
+      <div class="meio">
+          <center>
+              <div class="logo">
+                  <img src="static/imagens/logo.png" class="" alt="Responsive image">
+              </div>    
+          </center>  
+          
+          <div class="row ">
+              <!-- <div class="texto d-inline-block">
+                  <p>"Se, a princípio, a ideia não é absurda, então não há esperança para ela."</p>
+                  <p>Albert Einstein</p>
+              </div> -->
+              <div class="d-inline-block justify-self-end">
+                  <img src="static/imagens/banner2.png" class="menina" alt="Responsive image">
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <div class="linha2 container-fluid">
+      <div class="meio2 m-0 p-0">
+          <div class=" row titulo2 p-0" >
+            <div class=" col-12 col-md-10 m-0">
+                <h2 class="p-5">Quem Somos</h2>
+            </div>    
+          </div>
+          
+          <div class="row row2 p-0">
+            
+            
+            <div class="col-12 col-md-5 col-lg-5 m-3">
+              <div class="card">
+                <img class="card-img-top" src="static/imagens/bahia.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Baiana</h5>
+                  <p class="card-text">A GreenRocket é uma empresa baiana de tecnologia que hoje abraça desafios de machine learning para soluções digitais. Com a crescente demanda para software inteligentes, a empresa se propõe a entregar sistemas construídos com o que há de mais atual no mercado.</p>
+                </div>
               </div>
             </div>
-          </nav>
-    </div>
-    
-    <div class="linha1 linha container-fluid ">
-        <div class="meio">
-            <center>
-                <div class="logo">
-                    <img src="static/imagens/logo.png" class="" alt="Responsive image">
-                </div>    
-            </center>  
-            
-            <div class="row ">
-                <div class="texto d-inline-block">
-                    <p>"Se, a princípio, a ideia não é absurda, então não há esperança para ela."</p>
-                    <p>Albert Einstein</p>
-                </div>
-                <div class="d-inline-block justify-self-end">
-                    <img src="static/imagens/banner2.png" class="menina" alt="Responsive image">
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="linha2">
-        <div class="meio2">
-            <div class=" row titulo2" >
-                <div class=" col-10 col-md-10">
-
-                    <h2 class="p-5">Quem Somos</h2>
-                </div>    
-            
-            </div>
-            
-            <div class="row row2">
-                <div class="col-10 col-md-5 col-lg-5 m-3">
-                    <div class="card">
-                        <img class="card-img-top" src="static/imagens/bahia.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">Baiana</h5>
-                          <p class="card-text">A GreenRocket é uma empresa baiana de tecnologia que hoje abraça desafios de machine learning para soluções digitais. Com a crescente demanda para software inteligentes, a empresa se propõe a entregar sistemas construídos com o que há de mais atual no mercado.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10 col-md-5 col-lg-5 m-3">
-                    <div class="card" >
-                        <img class="card-img-top" src="static/imagens/data.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">Inovadora</h5>
-                          <p class="card-text">Os projetos que estão em desenvolvimento pela greenrocket possuem, como regra, a inovação em seu DNA. Com isso, nossa empresa busca através das mais recentes tecnologias, trazer soluções precisas para tarefas que mergulhem em um mundo abundante de dados.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10 col-md-5 col-lg-5 m-3 ">
-                    <div class="card">
-                        <img class="card-img-top" src="static/imagens/estatistica.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">Machine Learning</h5>
-
-                          <p class="card-text">Tudo o que fazemos tem o machine learning em foco, mostrando nosso diferencial ao se apropriar da estatística, modelos econométricos, para entregar produtos inovadores com um alto poder de gerenciamento de dados independente de sua origem endógena ou exógena.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
           
+
+
+            <div class="col-12 col-md-5 col-lg-5 m-3">
+              <div class="card" >
+                <img class="card-img-top" src="static/imagens/data.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Inovadora</h5>
+                  <p class="card-text">Os projetos que estão em desenvolvimento pela greenrocket possuem, como regra, a inovação em seu DNA. Com isso, nossa empresa busca através das mais recentes tecnologias, trazer soluções precisas para tarefas que mergulhem em um mundo abundante de dados.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>  
+
+  <div class="linha3 p-0 m-0 justify-content-center container-fluid ">
+    <div class=" row m-0 p-0 centro justify-content-center">
+        <div class="row m-0 p-0 linhat justify-content-center">
+          <div class="titulo2 col-10">
+            <h2 class=""> Nossa linha de desenvolvimento </h2>
+          </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-5 mt-5">
+          <div class="card ">
+            <div class="card-body">
+              <h5 class="card-title">Machine Learning</h5>
+              <p class="card-text">ML é uma aplicação da inteligência artificial, consistindo em algoritmos que produzem conhecimento para uma máquina adequar suas tarefas. Um algoritmo de ML coleta um conjunto de dados de entrada, identifica padrões e gera saídas. As entradas de dados possuem seus próprios recursos e a abundância desses recursos é fundamental para qualquer algoritmo de ML. Nossos sistemas são arquitetados para potencializar a obtenção das *features* das entradas de dados, ao ponto de se aproveitar da inteligência criada para gerenciar as saídas de dados que estão por todo o sistema</p>
+            </div>
+            <img class="card-img-top" src="static/imagens/robo.jpg" alt="Card image cap">
+          </div> 
+        </div> 
+      
+      <div class="col-xs-12 col-sm-12 col-12 col-md-12 col-lg-12 col-xl-6 mt-5 mb-5">
+        <div class="card " >
+          <div class="card-body">
+            <h5 class="card-title">Data Science</h5>
+            <p class="card-text">Data Science, ou em português, ciência de dados é uma ferramenta que se baseia no estudo disciplinado dos dados e informações a partir da análise de dados. Para isso, essa ciência foca na captura de informações, na transformação desses dados, e até mesmo, em sua geração. Data Science se apropria das ferramentas computacionais, da estatística, lógica matemática e do conhecimento do Negócio para produzir conhecimento, o qual pode ser utilizado nas mais diversas formas, sendo uma forte aliada para a condução de qualquer tipo de negócio.</p>
+          </div>
+          <img class="card-img-top" src="static/imagens/server.jpg" alt="Card image cap">
+        </div>
+      </div>
     </div>
+  </div>
+    
+    
 
+  </div>
+   
 
-
-
-</div>   
+ 
 
 
 
