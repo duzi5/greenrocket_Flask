@@ -475,15 +475,6 @@ button{
     
 }
 
-.jumbotron{
-    position: absolute;
-    width: 80%;
-    max-width: 1600PX;
-    opacity: 0.8;
-    top: 50%;
-    bottom: 50%;
-
-}
 
 
 
@@ -507,46 +498,12 @@ button{
     
 }
 
-ul li{
-    text-decoration: none;
-    display: inline;
-    
-    margin: 9px;
-    height: 100%;
-    
-}
-
-li >a{
-    color: rgb(54, 53, 53);
-    font-style:normal;
-    font-weight: 800;
-    
-    
-}
 
 
-a{
-    color: rgb(37, 33, 33);
-    text-decoration:none;
-}
 
-h5{
-    font-size: 4em;
-    margin: auto;
-    color:black;
-}
 
-.navbarra{   
-    background-color: rgb(212, 212, 212);  
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-
-    max-width: 1600px;
-    height: 100%;
     
-    
-}
+
 nav{
     background-color: rgb(212, 212, 212); 
 }
@@ -670,9 +627,9 @@ h4{
 }
 .amarra{
     position: relative;
-    max-width: 100%;
+    
     border: green solid 4px;
-    padding: 6%;
+    padding: 4%;
 
 }
 
@@ -706,9 +663,19 @@ h4{
 }
 .linha4{
     justify-content: center;
-    max-height: 700px;
+    
     border: red 2px dotted;
 }
+
+.linha5{
+    background: #bababa;
+    border: #616161 solid 3px;
+
+}
+
+
+
+
 
 .carousel{ 
     max-height: 700px ;
