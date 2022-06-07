@@ -594,10 +594,7 @@ h5{
     text-shadow: #e0e0e0 1px 1px 0;
 }
 p{
-    font-size: clamp(1em, 1em + 2vw, 1.75em);
-    opacity: 0.8;
     color: #616161;
-    
     text-shadow: #e0e0e0 1px 1px 0;
 }
 
@@ -648,9 +645,8 @@ p{
 }
 
 .card img{
-    border-radius: 50%;
-    max-width: 300px;
-    max-height: 300px;
+    border-radius: 4%;
+  
     margin: auto;
 }
 .card{
