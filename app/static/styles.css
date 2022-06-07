@@ -561,13 +561,7 @@ nav{
     padding: 0%;
 }
 
-p{
-    font-size: 1.4em;
-    opacity: 0.8;
-    color: #616161;
-    
-    text-shadow: #e0e0e0 1px 1px 0;
-}
+
 
 .navbar-brand{
     color: #616161;
@@ -586,7 +580,7 @@ p{
 
 h1{
     color: #616161;
-    font-size: 7rem;
+    font-size: 120px;
     text-shadow: #e0e0e0 1px 1px 0;
 }
 li{
@@ -595,11 +589,20 @@ li{
     text-shadow: #e0e0e0 1px 1px 0;
 }
 
-h4{
+h5{
     color: #616161;
-  
     text-shadow: #e0e0e0 1px 1px 0;
 }
+p{
+    font-size: clamp(1em, 1em + 2vw, 1.75em);
+    opacity: 0.8;
+    color: #616161;
+    
+    text-shadow: #e0e0e0 1px 1px 0;
+}
+
+
+
 
 .link{
     color: #616161;
@@ -672,8 +675,15 @@ h4{
     border: #616161 solid 3px;
 
 }
+.centro6{ 
+    max-width: 1600px;
 
+}
 
+.centro5{
+    max-width: 1600px;
+    margin: auto;
+}
 
 
 
@@ -685,23 +695,7 @@ h4{
 }
 
 
-/* 
-@media screen and (max-width: 995px){
-
-    .logodobanner{
-        display: inline-block;
-        position: absolute;
-        width: 250px;
-        top: 0px;
-        left: 0px;
-    }
-    .conteudo{
-        position: absolute;
-        width: 250px;
-        top: 30px;
-        right: 50px;
-        display: inline-block;
-    }
 
 
-} */
+
+
