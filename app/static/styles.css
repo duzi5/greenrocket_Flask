@@ -86,7 +86,8 @@ nav{
     width: 1600px;
     height: 100%;
 
-    border: 5px solid blueviolet;
+  
+
 }
 
 .menu{
@@ -104,7 +105,7 @@ nav{
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    border: red solid 5px;
+   
 }
 
 .conteudo{ 
@@ -199,7 +200,7 @@ p{
 .amarra{
     position: relative;
     
-    border: green solid 4px;
+
     padding: 4%;
 
 }
@@ -207,11 +208,11 @@ p{
 .linha3{
     width: 100%;
    
-    border: #646464 solid 3px;
+
 }
 .linha3 .row{
     max-width: 1600px;
-   border: darkorchid dotted 5px;
+  
    margin: auto;
 }
 
@@ -227,19 +228,19 @@ p{
 .centro4{
     max-width: 1600px;
     max-height: 700px;
-    border: blue solid 5px;
+  
     
     margin:auto;
 }
 .linha4{
     justify-content: center;
     
-    border: red 2px dotted;
+
 }
 
 .linha5{
     background: #bababa;
-    border: #616161 solid 3px;
+ 
 
 }
 .centro6{ 
