@@ -182,8 +182,13 @@ h5{
 }
 p{
     color: #000000;
+    text-align: justify;
     /* color: #cecece;
     text-shadow: #e0e0e0 1px 1px 0; */
+}
+
+.tituloesquerda{
+    text-align: end;
 }
 
 
@@ -271,7 +276,11 @@ p{
 }
 
 .linha5{
-    background: orange;
+    background: rgb(14, 129, 3);
+    -webkit-box-shadow: 7px 1px 95px -31px rgba(4,0,255,0.69);
+    -moz-box-shadow: 7px 1px 95px -31px rgba(4,0,255,0.69);
+    box-shadow: 7px 1px 95px -31px rgba(4,0,255,0.69);
+    margin:5px;
  
 
 }
@@ -299,9 +308,9 @@ p{
 
 
 .tudo{
+    color:antiquewhite;
+}
 
-    
-    color: #616161;
-    text-shadow: #e0e0e0 1px 1px 0;
-
+.centro5 a{ 
+    background-color:chartreuse;
 }
