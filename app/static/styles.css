@@ -22,9 +22,9 @@
     max-height: fit-content;
     justify-content: center;
     /* background: #bababa; */
-    -webkit-box-shadow: 5px 7px 9px 11px rgba(38,34,161,1);
-    -moz-box-shadow: 5px 7px 9px 11px rgba(38,34,161,1);
-    box-shadow: 5px 7px 7px 11px rgba(38,34,161,1);
+    -webkit-box-shadow: 5px 7px 9px 11px rgb(7, 214, 17);
+    -moz-box-shadow: 5px 7px 9px 11px rgb(2, 206, 29);
+    box-shadow: 5px 7px 7px 11px rgb(43, 202, 3);
     display: block;
     background-color: #3e69f8;
     
