@@ -1,9 +1,10 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 *{
     margin: 0px;
     padding: 0px;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 
 
@@ -13,25 +14,35 @@
     margin-top: 0%;
     margin-bottom: 0%;
     padding: 0%;
-    background-color: aqua;
+    background-color: rgb(241, 235, 177);
 }
 
 .header{
     padding: 0px;
     max-height: fit-content;
     justify-content: center;
-    background: #bababa;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
-    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    /* background: #bababa; */
+    -webkit-box-shadow: 5px 7px 9px 11px rgba(38,34,161,1);
+    -moz-box-shadow: 5px 7px 9px 11px rgba(38,34,161,1);
+    box-shadow: 5px 7px 7px 11px rgba(38,34,161,1);
     display: block;
+    background-color: #3e69f8;
+    
 
+}
+
+.header h1{
+    color: chartreuse;
+}
+.header p{
+    color: antiquewhite;
 }
 
 .centro1{
     margin: auto;
    
     max-width: 1600px;
-    width: 100%;
+   
  
     
 }
@@ -61,6 +72,9 @@
     overflow: hidden;
     
 }
+
+
+
 
 .titulo{
     
@@ -108,12 +122,7 @@ nav{
    
 }
 
-.conteudo{ 
- 
-   
-   
-  
-}
+
 
 .logodobanner img{ 
     max-width: 350px;
@@ -153,25 +162,38 @@ nav{
 
 
 h1{
-    color: #616161;
-    text-shadow: #e0e0e0 1px 1px 0;
+    /* color: #dbd6d6;
+    text-shadow: #e0e0e0 1px 1px 0; */
+    color: #000000;
+    font-weight: 600;
 }
 li{
-    color: #616161;
-    text-shadow: #e0e0e0 1px 1px 0;
+    /* color: #616161;
+    text-shadow: #e0e0e0 1px 1px 0; */
+    color: #000000;
+
 }
 
 h5{
-    color: #616161;
-    text-shadow: #e0e0e0 1px 1px 0;
+    /* color: #d3d3d3;
+    text-shadow: #e0e0e0 1px 1px 0; */
+    color: rgb(118, 130, 240);
+    font-weight: 500;
 }
 p{
-    color: #616161;
-    text-shadow: #e0e0e0 1px 1px 0;
+    color: #000000;
+    /* color: #cecece;
+    text-shadow: #e0e0e0 1px 1px 0; */
 }
 
 
+.card1{
+    right: -120px;
+}
 
+.card2{
+    left: -120px;
+}
 
 .link{
     color: #616161;
@@ -181,7 +203,7 @@ p{
 
 
 .logodobanner img{ 
-    opacity: 0.6;
+    opacity: 1;
 }
 
 .navbar-toggler-icon{
@@ -216,14 +238,24 @@ p{
    margin: auto;
 }
 
-.card img{
-    border-radius: 4%;
-  
-    margin: auto;
+.linha3 h2{
+    color: rgb(1, 52, 110)
 }
-.card{
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
-    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+
+.cardimg{
+    border-radius: 2%;
+    box-shadow: #333333 2px 3px 2px 1PX;
+  
+}
+
+
+
+
+.card1{
+    /* -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); */
+    border: 0px white solid;
 }
 .centro4{
     max-width: 1600px;
@@ -239,7 +271,7 @@ p{
 }
 
 .linha5{
-    background: #bababa;
+    background: orange;
  
 
 }
