@@ -6,7 +6,7 @@ $(document).ready(function () {
     var altura = window. screen. height;
     var largura = window. screen. width;
     
-    
+        $('.cardy').css('display', 'none')
     
 //     function mudacor(cor1, cor2, tmp)
 //     { 
@@ -42,11 +42,18 @@ $(document).ready(function () {
         console.log('tá funcionando')
     }
 
+    $('.faixa').hide()
+    
+    setTimeout(()=>{
+    $('.faixa').css('width', '100vw').css('position', 'relative').css('height', '600px').css('background-color', 'yellowgreen').css('z-index', '6').css('font-size', '20rem').css('padding', '0')
+        $('.faixa').slideDown(2000)
 
+    }, 500)
 
+    setTimeout(()=>{
+        $('.faixa').slideUp(1000)
 
-
-
+    }, 13000)
 
 
 
@@ -75,3 +82,26 @@ $(document).ready(function () {
 
 
 })
+
+
+
+
+
+
+$(window).scroll( ()=>{
+    var documentoTop = $(document).scrollTop()
+    var alturaCard =  $('.card1').offset().top
+    console.log(documentoTop)
+    // console.log(alturaCard)
+
+    if (documentoTop > 150){
+        $('.card1').addClass('animate__bounceInRight animate__animated animate__delay-9s d-block')
+    }
+    if(documentoTop > 800 && documentoTop <1200){
+        $('.card2').addClass('animate__bounceInLeft animate__animated animate__delay-9s d-block')
+    }
+    if(documentoTop > 1500) {
+        $('.card3').addClass('animate__bounceInLeft animate__animated animate__delay-9s d-block')
+    }
+})    
+ 

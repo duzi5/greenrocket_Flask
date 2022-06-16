@@ -352,3 +352,23 @@ p{
 .cls-1{
     fill: #e0e0e0;
 }
+
+.faixa{
+    animation: wobble;
+    animation-duration: 5s;
+  
+
+}
+
+.faixa p{
+    font-size: 8rem;
+    padding: 100px;
+    text-align: center;
+    font-weight: 600;
+    color: antiquewhite;
+    animation: wobble;
+    animation-duration: 3s;
+    animation:heartBeat; 
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
