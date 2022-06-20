@@ -1,0 +1,110 @@
+.slide1{
+    background-image: url('../static/imagens/logo23d4.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 30% 25%;
+    background-size: 1200px;
+}
+.amarra{
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  
+    max-height: 100%;
+;
+    
+}
+.bem-vindo{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    font-size: 4rem;
+    
+}
+
+.imgbanner:hover{
+    opacity: 1;
+}
+.titulo{
+    
+    align-items: center;
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 6rem;
+    
+}
+
+@media (min-width: 0) { 
+    .slide1  h3{
+        font-size: 3.8rem;
+    }
+    .slide1 img{
+        height: 190px;
+    }
+    .slide1 p{ 
+        font-size: 3.5rem;
+    }
+
+
+
+}
+
+@media (min-width: 576px) { 
+
+
+
+
+
+}
+
+@media (min-width: 768px) {
+
+
+
+}
+
+
+@media (min-width: 992px) { 
+
+    .slide1{
+        background-size: 1700px;
+
+    }
+   
+    .slide1  h3{
+        font-size: 2.8rem;
+    }
+    .slide1 img{
+        height: 130px;
+    }
+    .slide1 p{ 
+        font-size: 2.5rem;
+    }
+
+
+}
+
+
+@media (min-width: 1200px) { 
+
+
+
+
+
+}
+
+@media (min-width: 1600px) { 
+
+
+
+}
+
+
+
+
+
