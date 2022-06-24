@@ -1,4 +1,4 @@
-from alchemy import banco
+from Alchemy import banco
 
 class VisitanteModel(banco.Model):
     __tablename__ = 'visitantes'
@@ -6,7 +6,7 @@ class VisitanteModel(banco.Model):
     nome = banco.Column(banco.String(80))
     email = banco.Column(banco.String(80))
     telefone = banco.Column(banco.String(11))
-    objetivo = banco.Column(banco.Integer80)
+    objetivo = banco.Column(banco.Integer)
     minimalista = banco.Column(banco.Boolean)
     negocio = banco.Column(banco.String(80))
 

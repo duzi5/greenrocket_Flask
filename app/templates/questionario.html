@@ -9,13 +9,13 @@
         </div>
     </div>
     
-    <form action="#">
+    <form action="{{ url_for('visitas') }}" method="POST">
         <div class="row">
             <div class="col-12">
                 <label for="">Diga-nos o seu nome.</label>
             </div>
             <div class="col-12">
-                <input class="form-control" type="text">
+                <input name="nome" class="form-control" type="text">
             </div> 
         </div>    
         <div class="row">
@@ -23,7 +23,7 @@
                 <label for="">Informe o seu email.</label>
             </div>
             <div class="col-12 ">
-                <input class="form-control" type="text">
+                <input name="email" class="form-control" type="text">
             </div>
         </div>
         <div class="row">
@@ -31,7 +31,7 @@
                 <label>Informe o seu telefone.</label>
             </div>
             <div class="col-12 ">
-                <input class="form-control" type="text">
+                <input name="telefone" class="form-control" type="text">
             </div>
         </div>
         <div class="row">
@@ -52,7 +52,7 @@
         <div class="row">
             <div class="col-12">
                 <label class="" for="">Qual é a sua profissão ou área do seu negócio?</label>
-                <input type="text" class="form-control">
+                <input type="text" name="negocio" class="form-control">
             </div>
         </div>
         <div class="row">
@@ -64,16 +64,16 @@
        
         <div class="row">    
             <div class="col-3 form-check ml-5">
-                <input class="form-check-input" type="radio" name="minimalista" value="1" placeholder="Sim">
+                <input class="form-check-input" name="minimalista" type="radio" name="minimalista"  placeholder="Sim">
                 <label class="form-check-label" for="Sim">Sim</label>
             </div>
             <div class="col-3 form-check">
-                <input class="form-check-input" type="radio" name="minimalista" id="" value="2" placeholder="Não">
+                <input class="form-check-input" type="radio" name="minimalista" id=""  placeholder="Não">
                 <label class="form-check-label"for="Não">Não</label>
             </div>
         </div>    
         <div class="row">
-            <button type="submit" href="#" class="btn btn-success p-2 m-3">Enviar</button>
+            <button type="submit"  class="btn btn-success p-2 m-3">Enviar</button>
         </div>
         <div class="row">
             <div class="col-12">
