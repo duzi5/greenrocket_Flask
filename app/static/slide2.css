@@ -1,0 +1,70 @@
+
+
+.slide2 .amarra{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide2 .amarra p{ 
+    font-size: 7rem;
+    text-align: center;
+    animation: lightSpeedInLeft;
+    animation-duration: 2s;
+
+}
+
+
+@media (min-width: 0) { 
+    .slide1  h3{
+        font-size: 3.8rem;
+    }
+    .slide1 img{
+        height: 190px;
+    }
+    .slide1 p{ 
+        font-size: 3.5rem;
+    }
+
+
+
+}
+
+@media (min-width: 576px) { 
+
+
+
+
+
+}
+
+@media (min-width: 768px) {
+
+
+
+}
+
+
+@media (min-width: 992px) { 
+
+
+
+
+}
+
+
+@media (min-width: 1200px) { 
+
+
+
+
+
+}
+
+@media (min-width: 1600px) { 
+
+
+
+}

@@ -48,7 +48,9 @@ def index():
 def cadastro():    
     return render_template("cadastro.html")
 
-
+@app.route("/questionario")
+def questionario():
+    return render_template("questionario.html")
 
 
 # from app.controllers import defaults

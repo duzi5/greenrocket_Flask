@@ -14,6 +14,8 @@
     margin-top: 0%;
     margin-bottom: 0%;
     padding: 0%;
+    width: 100vw;
+    height: 100vh;
 
   
 }
@@ -27,14 +29,13 @@
     overflow:hidden;
     position: relative;
     margin: 0;
-  
     width: 100vw;
 }
 .slide{
     height: 100vh;
     width: 100vw;
     justify-content: center;
-   
+    align-items: center;
     margin: 0%;
     
 }
@@ -42,22 +43,7 @@
 
 
 
-.cabecalho{
-    height: 50px;
-    width: 100%;
-    opacity: 0.9;
-    
-    display:none;
-    
-    
-}
-.cabecalho img{ 
-    margin-top: 8px;
-    margin-bottom: 3px;
-    height: 40px;
-    padding-left: 80px;
-    position: fixed;
-}
+
 
 
 
