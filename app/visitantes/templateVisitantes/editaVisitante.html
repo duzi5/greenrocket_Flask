@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{%block content %}
+
+<div class="container">
+       
+    <form action="atualizaVisitante/{{visitante.id}}" method="POST">
+        <div class="row">
+            <div class="col-12">
+                <label for="">Diga-nos o seu nome.</label>
+            </div>
+            <div class="col-12">
+                <input name="nome" class="form-control" type="text" value="{{visitante.nome}}">
+            </div> 
+        </div>    
+        <div class="row">
+            <div class="col-12">
+                <label for="">Informe o seu email.</label>
+            </div>
+            <div class="col-12 ">
+                <input name="email" class="form-control" type="text" value="{{visitante.email}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label>Informe o seu telefone.</label>
+            </div>
+            <div class="col-12 ">
+                <input name="telefone" class="form-control" type="text" value="{{visitante.telefone}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label for="">Qual é o seu objetivo?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <select name="objetivo" class="form-control" id="" value="{{visitante.objetivo}}">
+                    <option value="" disabled selected>Escolha uma opção</option>
+                    <option value="1"> Site pessoal ou institucional</option>
+                    <option value="2"> Aplicação web</option>
+                    <option value="3"> Aplicativo</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label class="" for="">Qual é a sua profissão ou área do seu negócio?</label>
+                <input type="text" name="negocio" class="form-control" value="{{ visitante.negocio }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label>Tem preferência por um design minimalista?</label>
+            </div>
+        </div>
+        
+       
+        <div class="row">    
+            <div class="col-3 form-check ml-5">
+                <input class="form-check-input" name="minimalista" type="radio" name="minimalista" value="{{visitante.minimalista}}" >
+                <label class="form-check-label" for="Sim">Sim</label>
+            </div>
+            <div class="col-3 form-check">
+                <input class="form-check-input" type="radio" name="minimalista" id="" value="{{visitante.minimalista}}" >
+                <label class="form-check-label"for="Não">Não</label>
+            </div>
+        </div>    
+        <div class="row">
+            <button type="submit"  class="btn btn-success p-2 m-3">Atualizar</button>
+        </div>
+        
+    </form>
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

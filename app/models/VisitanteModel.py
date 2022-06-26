@@ -1,4 +1,7 @@
+from flask_login import UserMixin
 from Alchemy import banco
+from flask_sqlalchemy import SQLAlchemy
+
 
 class VisitanteModel(banco.Model):
     __tablename__ = 'visitantes'
@@ -33,5 +36,4 @@ class VisitanteModel(banco.Model):
     def delete_user(self):
         banco.session.delete(self)
         banco.session.commit()
-    
     

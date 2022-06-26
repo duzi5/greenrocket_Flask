@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<div class="container">
+    
+    <h1>CADASTRO DE GASTOS</h1>
+    
+    <form action="{{ url_for('controle_financeiro.cadastra') }}" method="POST" class="rounded">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <label for="data">Data</label>
+                        <input class="form-control"type="date" name="data" id="data">
+                    </div>
+                    <div class="col-8">
+                        <label for="">Descrição</label>
+                        <input class="form-control" type="text" name="descricao">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for="">Valor</label>
+                        <input type="decimal" name="valor"  class="form-control" id="">
+                    </div>
+
+                    <div class="col-8">
+                        <label for="">Categoria</label>
+                        <select name="categoria" class="form-control">
+                            <option selected>Escolha</option>
+                            <option value="0">Bem-estar</option>
+                            <option value="1"> Mercado </option>
+                            <option value="2"> Educação e Software </option>
+                            <option value="3"> Transporte</option>
+                            <option value="4"> Farmácia</option>
+                            <option value="5"> Tabaco e Cia</option>
+                            <option value="6"> Informática</option>
+                            <option value="7">Academia</option>
+                            <option value="8"> Alimentação</option>
+                            <option value="9"> Outros</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for=""> Parcela Atual</label>
+                        <input type="number" name="parcela_atual" class="form-control" value="0">
+                    </div>
+                    <div class="col-3">
+                        <label for=""> Total de Parcelas</label>
+                        <input type="number" name="total_parcelas" class="form-control" value="0">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Cartão</label>
+                        <select name="cartao" id="" class="form-control">
+                            <option value="1">Pan</option>
+                            <option value="2">Inter</option>
+                            <option value="3">C6</option>
+                        </select>
+                    </div>
+                <div class="row">
+                    <div class="col">
+                        <button type="submit" class="mt-3 btn btn-success">Enviar</button>
+                    </div>
+                </div>
+            </div>    
+        </form>
+        </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+    
+
+</div>
+
+
+
+
+
+
+{% endblock %}
