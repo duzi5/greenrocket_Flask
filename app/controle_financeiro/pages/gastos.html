@@ -1,41 +1,49 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 
 {% block content %}
 
-<div class="container">
-  <div class="row d-flex w-100 justify-content-center ">
-    <h1>Planilha de gastos</h1>
+
+
+
+
+
+
+
+
+<div class="container align-items-center">
+  <div class="row d-flex w-100 mt-3 justify-content-center  ">
+    <h1 id="tite">Planilha de gastos</h1>
     <hr>
     <div class="row justify-content-center d-flex">
       <h1>Junho/2022</h1>
     </div>
   </div>
 </div>
-
+<hr>
 
 <div class="container">
   <div class="row">
     <div class="col-3">
-      <div class="card bg-light mb-3" style="max-width: 18rem;">
+      <div class="card bg-success mb-3" style="max-width: 18rem;">
         <div class="card-header">TOTAL</div>
         <div class="card-body">
-        <h1>R${{total}}</h1>
+        <h1>{{total}}</h1>
         </div>
       </div>    
     </div>
     <div class="col-3">
-      <div class="card bg-light mb-3" style="max-width: 18rem;">
+      <div class="card bg-danger mb-3" style="max-width: 18rem;">
         <div class="card-header">TOTAL INTER</div>
         <div class="card-body">
-        <h1> R${{total_inter}} </h1>
+        <h1> {{total_inter}} </h1>
         </div>
       </div>
     </div>
     <div class="col-3">
-      <div class="card bg-light mb-3" style="max-width: 18rem;">
+      <div class="card bg-primary mb-3" style="max-width: 18rem;">
         <div class="card-header">TOTAL PAN</div>
         <div class="card-body">
-        <h1> R${{total_pan}} </h1>
+        <h1> {{total_pan}} </h1>
         </div>
       </div>
     </div>
@@ -43,30 +51,164 @@
       <div class="card bg-light mb-3" style="max-width: 18rem;">
         <div class="card-header">TOTAL C6</div>
         <div class="card-body">
-        <h1>R${{total_c6}} </h1>
+        <h1>{{total_c6}} </h1>
         </div>
       </div>
     </div>
-    <div class="col-3">
-      <div class="card bg-light mb-3" style="max-width: 18rem;">
-        <div class="card-header">TOTAL C6</div>
-        <div class="card-body">
-        
-        </div>
-      </div>
-    </div>
-   
   </div>
+</div>  
+<hr>
+<div class="container">
+  <h2>Por categoria</h2>
+  
+  <div class="row">
+    <div class="col-3">
+      <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">Bem-estar</div>
+        <div class="card-body">
+          <h3>{{total1}} </h3>
+          <h1 id="bem-estar"class="d-inline">{{totalcat1}} </h1>
+          <h1 class="d-inline">%</h1>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div  class="card-header">Educação e Software</div>
+        <div class="card-body">
+          <h3>{{total2}}</h3>
+          <h1 class="d-inline" id="educacao" > {{totalcat2}} </h1>
+          <h1 class="d-inline">%</h1>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">Transporte</div>
+        <div class="card-body">
+          <h3>{{total3}} </h3>
+          <h1 class="d-inline" id="transporte" >{{totalcat3}} </h1>
+          <h1 class="d-inline">%</h1>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">Farmácia</div>
+        <div class="card-body">
+        <h3>{{total4}}</h3> 
+        <h1 class='d-inline' id="farmacia">{{totalcat4}}</h1>
+        <h1 class="d-inline">%</h1> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">Tabaco e Cia</div>
+        <div class="card-body">
+          <h3>{{total5}}</h3>
+          <h1 class="d-inline" id="tabaco"> {{totalcat5}} </h1>
+          <h1 class="d-inline">%
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">TOTAL Informática</div>
+        <div class="card-body">
+        <h3>{{total6}} </h3>
+          <h1 class="d-inline" id="info">{{totalcat6}} </h1>
+        <h1 class="d-inline">%</h1>  
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">Academia</div>
+        <div class="card-body">
+          <h3>{{total7}} </h3>
+          <h1 class="d-inline" id="academia">{{totalcat7}} </h1>
+        <h1 class="d-inline">%</h1>  
+      </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">Alimentação</div>
+        <div class="card-body">
+          <h3>{{total8}} </h3>
+          <h1 class="d-inline" id="alimentacao">{{totalcat8}} </h1>
+        <h1 class="d-inline">%</h1>
+      </div>
+      </div>
+    </div>
+  </div>  
+
+  <div class="row">
+        
+      <div class="col-3">
+        <div class="card bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">Mercado</div>
+          <div class="card-body">
+            <h3>{{total9}}</h3>
+            <h1 class="d-inline" id="mercado"> {{totalcat9}} </h1>
+          <h1 class="d-inline">%</h1>  
+        </div>
+        </div>
+      </div>
+        
+      <div class="col-3">
+        <div class="card bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">Outros</div>
+          <div class="card-body">
+            <h3>{{total10}}</h3>
+            <h1 class="d-inline" id="outros"> {{totalcat10}} </h1>
+          <h1 class="d-inline">%</h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+  </div>
+  
+  
+  
+  
+  
 </div>
 
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="container">
-  <div class="row">
-    <div class="col">
+  <div class="row d-flex justify-content-center">
+    <div class="col justify-content-center d-flex">
       <div id="donutchart" style="width: 900px; height: 500px;"></div>
-      
     </div>
   </div>
 </div>
+ <hr>
+    
+
 
 
 
