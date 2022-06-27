@@ -4,7 +4,7 @@ from flask import Blueprint, render_template, request, redirect, url_for, curren
 from sqlalchemy import case
 from Alchemy import banco
 from ..models.Controle_FinanceiroModel import *
-import pandas as pd
+
 
 controle_financeiro = Blueprint('controle_financeiro', __name__, template_folder='pages', static_folder='estatico')
 
