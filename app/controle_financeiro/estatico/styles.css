@@ -2,3 +2,8 @@ form{
     background-color: rgb(223, 96, 12);
     padding: 30px;
 }
+
+.tabela{ 
+    max-height: 600px;
+    overflow-y: scroll;
+}
