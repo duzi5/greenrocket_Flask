@@ -8,3 +8,34 @@ form{
     overflow-y: scroll;
 }
 
+.cardy{
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height:  160px;
+    width: 180px;
+   
+    box-shadow: 0 5px 3px 0;
+}
+.cardy2{
+    height: 200px;
+    width: 200px;
+}
+
+
+
+.card-header{
+    background-color: transparent;
+    display: block;
+    
+}
+
+h3{
+    color: dimgrey;
+}
+
+.tt{
+    font-family:sans-serif;
+    font-weight: 500;
+}
