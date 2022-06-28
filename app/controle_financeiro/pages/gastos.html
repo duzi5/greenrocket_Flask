@@ -10,20 +10,25 @@
 
 
 
-<div class="container align-items-center">
+
+<div class="container align-items-center primeira">
   <div class="row d-flex w-100 mt-3 justify-content-center  ">
-    <h1 id="tite">Planilha de gastos</h1>
+    <h1 id="tite" class="tite">Planilha de gastos</h1>
     <hr>
-    <div class="row justify-content-center d-flex">
+    <div class=" tite row justify-content-center d-flex">
       <h1>Junho/2022</h1>
     </div>
   </div>
 </div>
+
+
 <hr>
 
-<div class="container">
+<div class="container segundo">
+  
+  
   <div class="row">
-    <div class="col-3 ">
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
       <div class=" cardy bg-dark text-white mb-3 pt-4" style="max-width: 18rem;">
         <div class="">TOTAL</div>
         <div class="card-body">
@@ -31,38 +36,47 @@
         </div>
       </div>    
     </div>
-    <div class="col-3">
+    
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
       <div class=" cardy  mb-3 pt-4" style="max-width: 18rem;">
-        <div class="">TOTAL INTER</div>
+        <div class="">INTER</div>
         <div class="card-body">
         <h1> {{total_inter}} </h1>
         </div>
       </div>
     </div>
-    <div class="col-3">
+    
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
       <div class="cardy  mb-3 pt-4" style="max-width: 18rem;">
-        <div class="">TOTAL PAN</div>
+        <div class="">PAN</div>
         <div class="card-body">
         <h1> {{total_pan}} </h1>
         </div>
       </div>
     </div>
-    <div class="col-3">
+    
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
       <div class="cardy  mb-3 pt-4" style="max-width: 18rem;">
-        <div class="">TOTAL C6</div>
+        <div class="">C6</div>
         <div class="card-body">
         <h1>{{total_c6}} </h1>
         </div>
       </div>
     </div>
+  
   </div>
+
 </div>  
+
 <hr>
-<div class="container">
-  <h2>Por categoria</h2>
+
+
+<div class="container mb-3 cat linha3 ">
+  <h2 id="porcat " class="tite"> Gastos por categoria</h2>
   
   <div class="row">
-    <div class="col-3">
+   
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
       <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
         <div class="tt">Bem-estar</div>
         <div class="card-body">
@@ -72,9 +86,10 @@
         </div>
       </div>
     </div>
-    <div class="col-3">
+    
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
       <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
-        <div  class="tt">Educação e Software</div>
+        <div  class="tt">Ed. e Soft</div>
         <div class="card-body">
           <h3 id="educacao">{{total2}}</h3>
           <h1 class="d-inline"  > {{totalcat2}} </h1>
@@ -82,7 +97,8 @@
         </div>
       </div>
     </div>
-    <div class="col-3">
+    
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
       <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
         <div class="tt">Transporte</div>
         <div class="card-body">
@@ -92,19 +108,21 @@
         </div>
       </div>
     </div>
-    <div class="col-3">
+    
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
       <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
         <div class="tt">Farmácia</div>
         <div class="card-body">
-        <h3 id="farmacia">{{total4}}</h3> 
-        <h1 class='d-inline' id="farmacia">{{totalcat4}}</h1>
-        <h1 class="d-inline">%</h1> 
+          <h3 id="farmacia">{{total4}}</h3> 
+          <h1 class='d-inline' id="farmacia">{{totalcat4}}</h1>
+          <h1 class="d-inline">%</h1> 
         </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-3">
+  
+  
+    
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
       <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
         <div class="tt">Tabaco e Cia</div>
         <div class="card-body">
@@ -115,78 +133,82 @@
         </div>
       </div>
     </div>
-    <div class="col-3">
+    
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
       <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
         <div class="tt">Informática</div>
         <div class="card-body">
-        <h3 id="info">{{total6}} </h3>
+          <h3 id="info">{{total6}} </h3>
           <h1 class="d-inline" >{{totalcat6}} </h1>
-        <h1 class="d-inline">%</h1>  
+          <h1 class="d-inline">%</h1>  
         </div>
       </div>
     </div>
-    <div class="col-3">
+    
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
       <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
         <div class="tt">Academia</div>
         <div class="card-body">
           <h3 id="academia">{{total7}} </h3>
           <h1 class="d-inline" >{{totalcat7}} </h1>
-        <h1 class="d-inline">%</h1>  
-      </div>
+          <h1 class="d-inline">%</h1>  
+        </div>
       </div>
     </div>
-    <div class="col-3">
+    
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
       <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
         <div class="tt">Alimentação</div>
         <div class="card-body">
           <h3 id="alimentacao">{{total8}} </h3>
           <h1 class="d-inline" >{{totalcat8}} </h1>
-        <h1 class="d-inline">%</h1>
-      </div>
+          <h1 class="d-inline">%</h1>
+        </div>
       </div>
     </div>
-  </div>  
+  
+  
+  
+  
+  
 
-  <div class="row">
         
-      <div class="col-3">
-        <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
-          <div class="tt">Mercado</div>
-          <div class="card-body">
-            <h3 id="mercado">{{total9}}</h3>
-            <h1 class="d-inline">  {{totalcat9}} </h1>
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+      <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
+        <div class="tt">Mercado</div>
+        <div class="card-body">
+          <h3 id="mercado">{{total9}}</h3>
+          <h1 class="d-inline">  {{totalcat9}} </h1>
           <h1 class="d-inline">%</h1>  
         </div>
-        </div>
       </div>
+    </div>
         
-      <div class="col-3">
-        <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
-          <div class="tt">Outros</div>
-          <div class="card-body">
-            <h3 id="outros">{{total10}}</h3>
-            <h1 class="d-inline" > {{totalcat10}} </h1>
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+      <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
+        <div class="tt">Outros</div>
+        <div class="card-body">
+          <h3 id="outros">{{total10}}</h3>
+          <h1 class="d-inline" > {{totalcat10}} </h1>
           <h1 class="d-inline">%</h1>
-
-          </div>
         </div>
       </div>
     </div>
-    
-    
-    
-    
-    
+  
+  
+  
   </div>
+    
+</div>    
+    
+
   
   
   
   
   
-</div>
 
-<hr>
-
+ <hr class="linha2">
 
 
 
@@ -199,7 +221,8 @@
 
 
 
-<div class="container">
+
+<div class="container mt-5 d-block donut">
   <div class="row d-flex justify-content-center">
     <div class="col justify-content-center d-flex">
       <div id="donutchart" style="width: 900px; height: 500px;"></div>
@@ -213,10 +236,10 @@
 
 
 
-<div class="container tabela">
-    <table class="table  table-light striped table-hover">
-        <thead>
-          <tr>
+<div class="container mb-5 tabela">
+    <table class="table thead-dark  table striped table-hover">
+        <thead class="">
+          <tr class="bg-dark text-white" >
               <td>id</td>
               <td>Data</td>
               <td>Descrição</td>
@@ -252,6 +275,9 @@
       </table>
 </div>
 
+<div class="container-fluid bg-dark rodape">
+
+</div>
 
 
 
