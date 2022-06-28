@@ -18,7 +18,7 @@ app = Flask(__name__)
 banco.init_app(app)
 
 app.register_blueprint(visitantes, url_prefix="/visitantes")
-app.register_blueprint(controle_financeiro, url_prefix="/financas")
+app.register_blueprint(controle_financeiro, subdomain = 'financas')
 
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://dfkzaikcvapuga:53a950cc262dfa0976e626087e8cfc978bdc9295fcffa70acee3a06f662d4c28@ec2-52-200-215-149.compute-1.amazonaws.com:5432/d9utdggln4gbf6'

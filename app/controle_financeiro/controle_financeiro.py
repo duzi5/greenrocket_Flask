@@ -7,10 +7,15 @@ from ..models.Controle_FinanceiroModel import *
 from ..controle_financeiro.controllers.exibeController import controle_financeiro_home
 from ..controle_financeiro.controllers.cadastra import cadastra
 
+
+
+
+
+
 controle_financeiro = Blueprint('controle_financeiro', __name__, template_folder='pages', static_folder='static')
 
 
-controle_financeiro.route('/', methods=['GET', 'POST'])(controle_financeiro_home)
+controle_financeiro.route('/')(controle_financeiro_home)
     
 
 controle_financeiro.route("/cadastra", methods=['GET', 'POST'])(cadastra)
