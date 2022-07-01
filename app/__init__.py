@@ -12,28 +12,29 @@ from flask_bootstrap import Bootstrap
 from werkzeug.middleware.proxy_fix import ProxyFix
 from app.visitantes.visitantes import visitantes
 from app.controle_financeiro.controle_financeiro import controle_financeiro
+from app.controle_financeiro.controle_financeiro import UserControl
+from flask_migrate import Migrate
+
 
 app = Flask(__name__)
 
 banco.init_app(app)
 
 app.register_blueprint(visitantes, url_prefix="/visitantes")
-app.register_blueprint(controle_financeiro, subdomain = 'financas')
+app.register_blueprint(controle_financeiro, url_prefix="/financas")
 
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://dfkzaikcvapuga:53a950cc262dfa0976e626087e8cfc978bdc9295fcffa70acee3a06f662d4c28@ec2-52-200-215-149.compute-1.amazonaws.com:5432/d9utdggln4gbf6'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = "nada"
 
-login_manager = LoginManager()
-login_manager.init_app(app)
-login_manager.login_view = 'login'
+
+Migrate(app, banco)
+
+
 
 bootstrap = Bootstrap(app)
 
-@login_manager.user_loader
-def load_user(session_token):
-    return UserModel.get(session_token)
 
 api = Api(app)
 
@@ -51,3 +52,10 @@ def index():
 def cadastro():    
     return render_template("cadastro.html")
 
+
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+@login_manager.user_loader
+def load_user(id):
+    return UserControl.query.filter_by(id = id).first()

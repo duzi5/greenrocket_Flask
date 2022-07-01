@@ -4,7 +4,21 @@
 
 
 
+<div class="container">
+  
+  <div class="row d-flex justify-content-end align-items-center">
+    <div class="col-md-4 d-flex justify-content-end align-items-center">
+      <h5>Bem-vindo(a) {{ usuario.nome }}</h5>
+    </div>
+    <div class="col-md-4 d-flex justify-content-end align-items-center">
+      <a class="btn btn-warning " href="{{url_for('.cadastra', id = usuario.id)}}">Cadastro de Gastos</a>
+      <a class ="btn btn-danger " href="{{url_for('.logout')}}"> logout </a>
+    </div>
+  </div>
 
+
+
+</div>
 
 
 
@@ -15,8 +29,21 @@
   <div class="row d-flex w-100 mt-3 justify-content-center  ">
     <h1 id="tite" class="tite">Planilha de gastos</h1>
     <hr>
-    <div class=" tite row justify-content-center d-flex">
-      <h1>Junho/2022</h1>
+    <div class=" tite row justify-self-end d-flex">
+      <div class="col-12">
+       
+        <form action="{{url_for('controle_financeiro.controle_financeiro_home', id = id, mes = mes, ano = ano)}}" method="POST">
+          <label for="">Mês/Ano</label>
+          <input  class = "form-control" type="month" id="start" name="mes" min="2022-06" value="{{mes}}">
+   
+
+          <button class="btn btn-success" type="submit" >Refinar</button>
+        </form>
+       
+        <h1>
+
+        </h1>
+    </div>
     </div>
   </div>
 </div>

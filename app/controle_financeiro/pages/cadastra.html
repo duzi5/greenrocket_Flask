@@ -8,7 +8,7 @@
     
     <h1>CADASTRO DE GASTOS</h1>
     
-    <form action="{{ url_for('controle_financeiro.cadastra') }}" method="POST" class="rounded">
+    <form action="{{ url_for('controle_financeiro.cadastra', id= id) }}" method="POST" class="rounded">
             <div class="form-group">
                 <div class="row">
                     <div class="col-4">
@@ -52,13 +52,18 @@
                         <label for=""> Total de Parcelas</label>
                         <input type="number" name="total_parcelas" class="form-control" value="0">
                     </div>
-                    <div class="col-6">
+                    <div class="col-3">
                         <label for="">Cartão</label>
                         <select name="cartao" id="" class="form-control">
                             <option value="1">Pan</option>
                             <option value="2">Inter</option>
                             <option value="3">C6</option>
                         </select>
+                    </div>
+                    <div class="col-3">
+                        <label for="">Mês</label>
+                        <input  class = "form-control" type="month" id="start" name="start" min="2022-06" value="{{mes}}">
+                
                     </div>
                 <div class="row">
                     <div class="col">

@@ -13,7 +13,7 @@ with app.app_context():
 
 if __name__ == "__main__":  
     app.run(debug = True)
-    website_url = 'localhost:5000'
+    website_url = 'financas.localhost:5000'
     app.config['SERVER_NAME'] = website_url 
     app.url_map.default_subdomain = "www"
 

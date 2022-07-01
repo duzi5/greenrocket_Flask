@@ -6,3 +6,4 @@ gunicorn
 psycopg2
 flask-bootstrap
 libsass
+FLASK-MIGRATE
