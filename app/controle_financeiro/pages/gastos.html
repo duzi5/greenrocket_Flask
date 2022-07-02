@@ -26,25 +26,40 @@
 
 
 <div class="container align-items-center primeira">
-  <div class="row d-flex w-100 mt-3 justify-content-center  ">
+  <div class="row d-flex w-100 mt-3 justify-content-end  ">
     <h1 id="tite" class="tite">Planilha de gastos</h1>
-    <hr>
-    <div class=" tite row justify-self-end d-flex">
-      <div class="col-12">
-       
-        <form action="{{url_for('controle_financeiro.controle_financeiro_home', id = id, mes = mes, ano = ano)}}" method="POST">
-          <label for="">Mês/Ano</label>
-          <input  class = "form-control" type="month" id="start" name="mes" min="2022-06" value="{{mes}}">
-   
+    <div class=" col-lg-2 tite row justify-content-end ">
+     
+      
+    <form class="" action="{{url_for('controle_financeiro.controle_financeiro_home', id = id, mes = mes, ano = ano)}}" method="POST">
+      <label for="">Mês/Ano</label>
+      <h1>{{mes}}/{{ano}}</h1>
+      <input  class = "form-control" type="month" id="start" name="mes" min="2022-06" value="">
+      <!-- <select class="form-select d-inline" aria-label="Default select example" name = "mes" value="{{mes}}">
+        <option  disabled>Mês</option>
+        <option value="1">Janeiro</option>
+        <option value="2">Fevereiro</option>
+        <option value="3">Março</option>
+        <option value="4">Abril</option>
+        <option value="5">Maio</option>
+        <option value="6">Junho</option>
+        <option value="7">Julho</option>
+        <option value="8">Agosto</option>
+        <option value="9">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+      </select>
+      <select class="form-select" aria-label="Default select example" name = "ano" value="{{ano}}">
+        <option  disabled>Ano</option>
+        <option value="2022">2022</option>
+        <option value="2023" desabled>2023</option>
+        <option value="2024" desabled>2024</option>
+      </select> -->
 
-          <button class="btn btn-success" type="submit" >Refinar</button>
-        </form>
-       
-        <h1>
-
-        </h1>
-    </div>
-    </div>
+      <button class="btn m-2 btn-success" type="submit" >Refinar</button>
+    </form>
+  </div>
   </div>
 </div>
 

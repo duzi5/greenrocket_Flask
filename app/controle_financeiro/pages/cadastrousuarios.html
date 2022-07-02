@@ -1,0 +1,141 @@
+{% extends 'base2.html' %}
+
+
+{% block content %}
+
+
+<div class="container">
+   
+<form action="{{url_for('controle_financeiro.cadastrousuarios')}}" method="post">
+    <div class="row mt-3">
+        <label for=""> Username</label>
+        <input class= "form-control" type="text" name="username" id="">
+    </div>
+    <div class="row mt-3">
+        <div class="row ">
+        <label for="">Nome</label>
+        <input class= "form-control" type="text" name="nome">
+    </div>
+    <div class="row mt-3">
+        <div class="row ">
+        <label for="sexo">Sexo</label>
+        <select class= "form-control" name="sexo" id="">
+            <option value="0" desabled>Selecione</option>
+            <option value="1">Masculino</option>
+            <option value="2">Feminino</option>
+        </select>
+    </div>
+    <div class="row mt-3">
+        <div class="row ">
+
+        <h5>Categorias</h5>
+        <div class="col-lg-3">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="" value="1" name="options">
+                <label class="form-check-label" for="">Alimentação</label>
+             </div>
+             <div class="form-check form-check-inline">
+               <input class=" form-check-input" type="checkbox" id="" value="2" name="options">
+               <label class="form-check-label" for="">Diversão</label>
+             </div>
+             <div class="form-check form-check-inline">
+               <input class="form-check-input" type="checkbox" id="" value="3" name="options">
+               <label class="form-check-label" for="">Internet</label>
+             </div>
+             <div class="form-check form-check-inline">
+               <input class="form-check-input" type="checkbox" id="" value="4" name="options">
+               <label class="form-check-label" for="">Mercado</label>
+             </div>
+            
+        </div>
+        <div class="col-lg-3">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="" value="5" name="options">
+                <label class="form-check-label" for="">Transporte</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="" value="6" name="options">
+                  <label class="form-check-label" for="">Vestuário</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="" value="7" name="options">
+                    <label class="form-check-label" for="">Estética</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="" value="8" name="options" >
+                    <label class="form-check-label" for="">Academia</label>
+                </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="" value="9" name="options">
+                <label class="form-check-label" for="">Saúde</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="" value="10 "name="options">
+                <label class="form-check-label" for="">Educação</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="" value="11" name="options">
+                <label class="form-check-label" for="">Serviços</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="" value="12" name="options">
+                <label class="form-check-label" for="">Filhos</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="" value="13" name="options" >
+              <label class="form-check-label" for="">Outros</label>
+            </div>
+        
+        
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-4 ">
+                <label for="">Data de Nascimento</label>
+                <input class= "form-control"class="m-2"type="date">
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-lg-6">
+                <label for="">Email </label>
+                <input class= "form-control" type="email">
+            </div>
+    
+            <div class="col-lg-6">
+                <label for="">Confirme seu email </label>
+                <input class= "form-control" type="email">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-6">
+                <label for="">Senha </label>
+                <input class= "form-control" type="password">
+            </div>
+    
+            <div class="col-lg-6">
+                <label for="">Confirme sua senha </label>
+                <input class= "form-control" type="password">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <button class= "btn btn-primary" type="submit">Cadastrar</button>
+        </div>
+
+    </form>
+</div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

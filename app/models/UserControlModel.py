@@ -1,8 +1,8 @@
-from sqlalchemy import ForeignKey
+
 from Alchemy import banco
+
 from flask_login import UserMixin
 # from ..controle_financeiro.controle_financeiro import login_manager
-
 
 class UserControl(banco.Model, UserMixin):
     __tablename__ = 'usuarios_control'
@@ -10,11 +10,19 @@ class UserControl(banco.Model, UserMixin):
     username = banco.Column(banco.String(20))
     nome = banco.Column(banco.String(80))
     senha = banco.Column(banco.String(200))
-   
-    def __init__(self,username, nome, senha):
+    email = banco.Column(banco.String(100))
+    data_nascimento = banco.Column(banco.Date)
+    sexo = banco.Column(banco.String(1))
+    categorias = banco.Column(banco.String(300))
+    ultima_visita = banco.Column(banco.DateTime)
+    
+    def __init__(self,username, nome, senha, data_nascimento, sexo, categorias, ultima_visita):
         self.username = username
         self.nome = nome
         self.senha = senha
-
+        self.data_nascimento = data_nascimento
+        self.sexo = sexo
+        self.categorias = categorias
+        self.ultima_visita = ultima_visita
   
 

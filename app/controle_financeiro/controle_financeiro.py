@@ -9,6 +9,7 @@ from ..controle_financeiro.controllers.exibeController import controle_financeir
 from ..controle_financeiro.controllers.cadastra import cadastra
 from ..controle_financeiro.controllers.login import login
 from ..controle_financeiro.controllers.logout import logout
+from ..controle_financeiro.controllers.cadastrousuarios import cadastrousuarios
 
 from flask_login import LoginManager, login_required
 
@@ -25,7 +26,7 @@ controle_financeiro.route('/', methods=["GET", "POST"])(login)
 
 controle_financeiro.route('/logout', methods=["GET", "POST"])(logout)
 
-
+controle_financeiro.route('/cadastrousuarios', methods=["GET", "POST"])(cadastrousuarios)
 
 
 

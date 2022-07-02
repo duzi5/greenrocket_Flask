@@ -1,16 +1,16 @@
 from crypt import methods
 import email
 from ensurepip import bootstrap
-from app.models.VisitanteModel import VisitanteModel
+
 from flask_restful import Api
 from flask import Blueprint, Flask, render_template, request, redirect, url_for
 from app.resources.usuarios import User, Usuarios, UserRegister, UserLogin
 from flask_login import LoginManager
-from app.models import UserModel
+
 from Alchemy import banco
 from flask_bootstrap import Bootstrap
 from werkzeug.middleware.proxy_fix import ProxyFix
-from app.visitantes.visitantes import visitantes
+
 from app.controle_financeiro.controle_financeiro import controle_financeiro
 from app.controle_financeiro.controle_financeiro import UserControl
 from flask_migrate import Migrate
@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 banco.init_app(app)
 
-app.register_blueprint(visitantes, url_prefix="/visitantes")
+
 app.register_blueprint(controle_financeiro, url_prefix="/financas")
 
 
