@@ -4,7 +4,7 @@ from ensurepip import bootstrap
 
 from flask_restful import Api
 from flask import Blueprint, Flask, render_template, request, redirect, url_for
-from app.resources.usuarios import User, Usuarios, UserRegister, UserLogin
+
 from flask_login import LoginManager
 
 from Alchemy import banco
@@ -38,10 +38,7 @@ bootstrap = Bootstrap(app)
 
 api = Api(app)
 
-api.add_resource(User, '/users')
-api.add_resource(Usuarios, '/users/<nomedocidadao>')
-api.add_resource(UserRegister, '/cadastro')
-api.add_resource(UserLogin, '/login')
+
 
 
 @app.route("/")
