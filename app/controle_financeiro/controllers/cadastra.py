@@ -1,5 +1,7 @@
 from app import controle_financeiro
+
 from app.models.CategoriaModel import CategoriaModel
+from app.models.MeiosModel import Meio
 from ..controllers import Controle_FinanceiroModel, request, banco, render_template, redirect, url_for, current_user
 from datetime import datetime
 def cadastra(id):
@@ -8,12 +10,15 @@ def cadastra(id):
         stringg = current_user.categorias
         # categorias = stringg.split(',')
         categorias = eval(stringg)
+        
+       
+           
+        
         print(categorias)
         didi = []        
         
         for categoria in categorias:
             regcategoria = CategoriaModel.query.filter_by(id = categoria).first().categoria
-            
             dictcategoria = {
                 'id' : categoria,
                 'categoria' : regcategoria

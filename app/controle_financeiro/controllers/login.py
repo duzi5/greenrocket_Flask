@@ -20,6 +20,7 @@ def login():
             return redirect(url_for('controle_financeiro.controle_financeiro_home', id = usuario.id, mes = mes, ano = ano))
         else:
             flash('Login inválido') 
+    
     return render_template('login.html')    
 
 

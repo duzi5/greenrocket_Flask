@@ -15,8 +15,9 @@ class UserControl(banco.Model, UserMixin):
     sexo = banco.Column(banco.String(1))
     categorias = banco.Column(banco.String(300))
     ultima_visita = banco.Column(banco.DateTime)
+    meios = banco.Column(banco.Integer)
     
-    def __init__(self,username, nome, senha, email, data_nascimento, sexo, options, ultima_visita):
+    def __init__(self,username, nome, senha, email, data_nascimento, sexo, options, ultima_visita, meios):
         self.username = username
         self.nome = nome
         self.senha = senha
@@ -25,5 +26,6 @@ class UserControl(banco.Model, UserMixin):
         self.sexo = sexo
         self.categorias = options
         self.ultima_visita = ultima_visita
+        self.meios = meios
   
 
