@@ -5,7 +5,7 @@ from flask import redirect, render_template, request, url_for
 
 from app.models.UserControlModel import UserControl
 
-from datetime import datetime
+from datetime import datetime, date
 def cadastrousuarios():
     if request.method == "POST":
         dados = {
@@ -23,7 +23,7 @@ def cadastrousuarios():
         user = UserControl(**dados)
         banco.session.add(user)
         banco.session.commit()
-        return redirect(url_for('controle_financeiro.controle_financeiro_home'))
+        return redirect(url_for('controle_financeiro.login'))
 
     
  
