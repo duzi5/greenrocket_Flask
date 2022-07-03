@@ -7,7 +7,7 @@
 <div class="container">
     
     <h1>CADASTRO DE GASTOS</h1>
-    
+    <h1>{{didi[2].nome}}</h1>
     <form action="{{ url_for('controle_financeiro.cadastra', id= id) }}" method="POST" class="rounded">
             <div class="form-group">
                 <div class="row">
@@ -29,17 +29,16 @@
                     <div class="col-8">
                         <label for="">Categoria</label>
                         <select name="categoria" class="form-control">
-                            <option selected>Escolha</option>
-                            <option value="0">Bem-estar</option>
-                            <option value="1"> Mercado </option>
-                            <option value="2"> Educação e Software </option>
-                            <option value="3"> Transporte</option>
-                            <option value="4"> Farmácia</option>
-                            <option value="5"> Tabaco e Cia</option>
-                            <option value="6"> Informática</option>
-                            <option value="7">Academia</option>
-                            <option value="8"> Alimentação</option>
-                            <option value="9"> Outros</option>
+                            <option value="" desabled>Selecione</option>
+                           {% for cat in didi %}
+                               <option value="{{cat['id']}}">{{ cat['categoria'] }}</option>
+                                
+                            {% endfor %}
+
+
+
+                           
+                                                        
                         </select>
                     </div>
                 </div>
