@@ -9,12 +9,18 @@ from datetime import datetime, date
 def cadastrousuarios():
     if request.method == "POST":
         
-        meiosids= []
         meios = request.form['meios']
-        meios = eval(meios)
-        for meio in meios:
+        meios2 = eval(meios)
+        meiosids= []
+        print(meios2)
+        for meio in meios2:
+            print(meio)
+            
             x = Meio(meio)
-            meiosids.append(x.get_id())
+            y = x.get_id(meio)
+            
+            
+            meiosids.append(y)
 
         
         dados = {

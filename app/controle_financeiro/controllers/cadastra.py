@@ -7,6 +7,23 @@ from datetime import datetime
 def cadastra(id):
    
     if current_user and current_user.id == id: 
+        
+        stringgg = current_user.meios
+        meios = eval(stringgg)
+        didi2=[]
+       
+        for meio in meios: 
+            nomemeio = Meio.query.filter_by(id = meio).first().nome
+            dictmeio ={ 
+                "id" : meio,
+                "nome" : nomemeio
+            }
+            didi2.append(dictmeio)
+        
+        
+        
+        
+        
         stringg = current_user.categorias
         # categorias = stringg.split(',')
         categorias = eval(stringg)
@@ -18,7 +35,7 @@ def cadastra(id):
         didi = []        
         
         for categoria in categorias:
-            regcategoria = CategoriaModel.query.filter_by(id = categoria).first().categoria
+            regcategoria = CategoriaModel.query.filter_by(id = categoria).first()
             dictcategoria = {
                 'id' : categoria,
                 'categoria' : regcategoria
@@ -34,10 +51,9 @@ def cadastra(id):
                 'categoria' : request.form["categoria"],
                 'parcela_atual' : request.form["parcela_atual"],
                 'total_parcelas' : request.form["total_parcelas"],
-                'cartao_id' : request.form["cartao"],
-                'mes' : request.form["mes"],
-                'ano' : request.form["ano"],  
-                'user_control_id' : id
+                'meio' : request.form["cartoes"],
+                'usuario_control_id' : current_user.id,
+                'mes' : 7-2022,
             }
 
             
@@ -48,7 +64,7 @@ def cadastra(id):
             banco.session.commit()
             return redirect(url_for('.cadastra', id = id))
         else: 
-            return render_template('cadastra.html', id = id, categorias = categorias, didi = didi)
+            return render_template('cadastra.html', id = id, categorias = categorias, didi = didi, didi2 = didi2)
 
     else:
         return('é necessário estar loggado para acessar o cadastro de gastos, você não está em um endereço permitido')    

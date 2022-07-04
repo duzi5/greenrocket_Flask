@@ -14,14 +14,15 @@ class Meio(banco.Model):
 
     def save_meio(self):
         banco.session.add(self)
-        banco.session.commit(self)
+        banco.session.commit()
 
 
     def get_id(self, nome):
-        nomedomeio = banco.query.filter_by(nome = nome).first()
-        if nomedomeio:
-            return nomedomeio.id
-        else: 
-            banco.session.add(nomedomeio)
-            banco.session.commit(nomedomeio)
-            return nomedomeio.id   
+        x = self.query.filter_by(nome = nome).first()
+        if  x:
+            return x.id
+        else:  
+            y = Meio(nome)
+            banco.session.add(y)
+            banco.session.commit()
+            return y.id   

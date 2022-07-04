@@ -53,10 +53,10 @@
                     </div>
                     <div class="col-3">
                         <label for="">Cartão</label>
-                        <select name="cartao" id="" class="form-control">
-                            <option value="1">Pan</option>
-                            <option value="2">Inter</option>
-                            <option value="3">C6</option>
+                        <select name="cartoes" id="" class="form-control">
+                            {% for meio in didi2 %}
+                            <option value="{{meio['id']}}">{{meio['nome']}}</option>
+                            {% endfor %}
                         </select>
                     </div>
                     <div class="col-3">
