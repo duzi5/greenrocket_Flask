@@ -30,10 +30,10 @@ class Controle_FinanceiroModel(banco.Model):
         self.categoria = categoria
         self.parcela_atual = parcela_atual
         self.total_parcelas = total_parcelas
-        self.meio = meio
         self.usuario_control_id= usuario_control_id
         self.mes = mes
         self.ano = ano
+        self.meio = meio
 
 
 

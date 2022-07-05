@@ -1,5 +1,5 @@
 from Alchemy import banco
-from app.models.CategoriaModel import CategoriaModel
+from app.models.CategoriaModel import Categoria
 
 from flask import redirect, render_template, request, url_for
 
@@ -27,7 +27,7 @@ def cadastrousuarios():
             "username" : request.form['username'],
             "nome" : request.form['nome'],
             "sexo" : request.form['sexo'],
-            "options" : request.form.getlist('options'),
+            "categorias" : request.form.getlist('categorias'),
             "data_nascimento" : request.form['data_nascimento'],
             "email" : request.form['email'],
             "senha" : request.form['senha'],

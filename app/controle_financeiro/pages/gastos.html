@@ -6,13 +6,20 @@
 
 <div class="container">
   
-  <div class="row d-flex justify-content-end align-items-center">
+  <div class="row d-flex justify-content-end align-items-center linha1">
     <div class="col-md-4 d-flex justify-content-end align-items-center">
-      <h5>Bem-vindo(a) {{ current_user.nome }}</h5>
+      <h5 class="letras1 saudacao">
+        Seja
+        {% if current_user.sexo == '1' %}
+        bem-vindo,
+        {% else %}
+        bem-vinda,
+        {% endif %}
+        {{ current_user.nome }}!</h5>
     </div>
     <div class="col-md-4 d-flex justify-content-end align-items-center">
-      <a class="btn btn-warning " href="{{url_for('.cadastra', id = current_user.id)}}">Cadastro de Gastos</a>
-      <a class ="btn btn-danger " href="{{url_for('.logout')}}"> logout </a>
+      <a href="{{url_for('.cadastra', id = current_user.id)}}"><button class="letras1 btn-dark btn botoes">Cadastro de Gastos</button></a>
+      <a href="{{url_for('.logout')}}"> <button class =" btn-dark btn botoes"> logout </button></a>
     </div>
   </div>
 
@@ -25,42 +32,25 @@
 
 
 
-<div class="container align-items-center primeira">
-  <div class="row d-flex w-100 mt-3 justify-content-end  ">
-    <h1 id="tite" class="tite">Planilha de gastos</h1>
-    <div class=" col-lg-2 tite row justify-content-end ">
-     
-      
-    <form class="" action="{{url_for('controle_financeiro.controle_financeiro_home', id = current_user.id, mes = mes, ano = ano)}}" method="POST">
-      <label for="">Mês/Ano</label>
-      <h1>{{mes}}/{{ano}}</h1>
-      <input  class = "form-control" type="month" id="start" name="mes" min="2022-06" value="">
-      <!-- <select class="form-select d-inline" aria-label="Default select example" name = "mes" value="{{mes}}">
-        <option  disabled>Mês</option>
-        <option value="1">Janeiro</option>
-        <option value="2">Fevereiro</option>
-        <option value="3">Março</option>
-        <option value="4">Abril</option>
-        <option value="5">Maio</option>
-        <option value="6">Junho</option>
-        <option value="7">Julho</option>
-        <option value="8">Agosto</option>
-        <option value="9">Setembro</option>
-        <option value="10">Outubro</option>
-        <option value="11">Novembro</option>
-        <option value="12">Dezembro</option>
-      </select>
-      <select class="form-select" aria-label="Default select example" name = "ano" value="{{ano}}">
-        <option  disabled>Ano</option>
-        <option value="2022">2022</option>
-        <option value="2023" desabled>2023</option>
-        <option value="2024" desabled>2024</option>
-      </select> -->
 
-      <button class="btn m-2 btn-success" type="submit" >Refinar</button>
-    </form>
+<div class="container primeira">
+  <div class="row d-flex w-100 mt-3 linhaprimeira ">
+   
+   <div class="col-lg-9">
+     <p id="labeltotal" class="letras1">Total do período</p>
+     <p id="totalgeral">{{totalgeral}}</p>
+   </div>
+     
+   <div class="col-lg-3">
+     <form class="mt-5" action="{{url_for('controle_financeiro.controle_financeiro_home', id = current_user.id, mes = mes, ano = ano)}}" method="POST">
+       <label class="letras1"for="">Mês/Ano</label>
+       <h1 class="letras1">{{mes}}/{{ano}}</h1>
+       <input  class = "form-control" type="month" id="start" name="mes" min="2022-06" value="">
+       <button class="letras1 btn m-2 btn-dark" type="submit" >Refinar</button>
+     </form>  
+   </div>   
   </div>
-  </div>
+  
 </div>
 
 
@@ -68,143 +58,41 @@
 
 <div class="container segundo">
   
-  {% for m in totalmeio.items %}
   <div class="row">
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-      <div class=" cardy bg-dark text-white mb-3 pt-4" style="max-width: 18rem;">
-        <div class="">m["meio"]</div>
-        <div class="card-body">
-        <h1>{{m["total"]}}</h1>
-        </div>
-      </div>    
-    </div>
-    
-  {% endfor %}
-<div class="container mb-3 cat linha3 ">
-  <h2 id="porcat " class="tite"> Gastos por categoria</h2>
-  
-  <div class="row">
-   
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-      <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
-        <div class="tt">Bem-estar</div>
-        <div class="card-body">
-          <h3 id="bem-estar">{{total1}} </h3>
-          <h1 class="d-inline">{{totalcat1}} </h1>
-          <h1 class="d-inline">%</h1>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-      <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
-        <div  class="tt">Ed. e Soft</div>
-        <div class="card-body">
-          <h3 id="educacao">{{total2}}</h3>
-          <h1 class="d-inline"  > {{totalcat2}} </h1>
-          <h1 class="d-inline">%</h1>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-      <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
-        <div class="tt">Transporte</div>
-        <div class="card-body">
-          <h3  id="transporte" >{{total3}} </h3>
-          <h1 class="d-inline" >{{totalcat3}} </h1>
-          <h1 class="d-inline">%</h1>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-      <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
-        <div class="tt">Farmácia</div>
-        <div class="card-body">
-          <h3 id="farmacia">{{total4}}</h3> 
-          <h1 class='d-inline' id="farmacia">{{totalcat4}}</h1>
-          <h1 class="d-inline">%</h1> 
-        </div>
-      </div>
-    </div>
-  
-  
-    
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-      <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
-        <div class="tt">Tabaco e Cia</div>
-        <div class="card-body">
-          <h3 id="tabaco">{{total5}}</h3>
-          <h1 class="d-inline" > {{totalcat5}} </h1>
-          <h1 class="d-inline">%
-          </h1>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-      <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
-        <div class="tt">Informática</div>
-        <div class="card-body">
-          <h3 id="info">{{total6}} </h3>
-          <h1 class="d-inline" >{{totalcat6}} </h1>
-          <h1 class="d-inline">%</h1>  
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-      <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
-        <div class="tt">Academia</div>
-        <div class="card-body">
-          <h3 id="academia">{{total7}} </h3>
-          <h1 class="d-inline" >{{totalcat7}} </h1>
-          <h1 class="d-inline">%</h1>  
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-      <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
-        <div class="tt">Alimentação</div>
-        <div class="card-body">
-          <h3 id="alimentacao">{{total8}} </h3>
-          <h1 class="d-inline" >{{totalcat8}} </h1>
-          <h1 class="d-inline">%</h1>
-        </div>
-      </div>
-    </div>
-  
-  
-  
-  
-  
+    {% for m in totalmeio %}
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-inline">
+        <div class=" cardy bg-dark text-white mb-3 pt-4" style="max-width: 18rem;">
+          <div class="letras1">{{m["meio"]}}</div>
+          <div class="card-body">
+            <h1 class="letras1">{{m["total"]}}</h1>
+          </div>
+        </div>    
+      </div>  
+    {% endfor %}
+  </div>
+</div>
 
-        
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+<hr>
+
+
+<div class="container mb-3 mt-3 cat linha3 ">
+  <h2 id="porcat " class="tite letras1"> Gastos por categoria</h2>
+  
+  <div class="row">
+  
+    {% for c in totalcat%}
+
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 categoria">
       <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
-        <div class="tt">Mercado</div>
+        <div class="nome letras1">{{ c["categoria"] }}</div>
         <div class="card-body">
-          <h3 id="mercado">{{total9}}</h3>
-          <h1 class="d-inline">  {{totalcat9}} </h1>
-          <h1 class="d-inline">%</h1>  
+          <h3 id="b" class="letras1">{{c["total"]}} </h3>
+          <h1 class="letras1 d-inline">{{c["percentual"]}} </h1>
+          <h1 class="letras1 d-inline">%</h1>
         </div>
       </div>
     </div>
-        
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-      <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
-        <div class="tt">Outros</div>
-        <div class="card-body">
-          <h3 id="outros">{{total10}}</h3>
-          <h1 class="d-inline" > {{totalcat10}} </h1>
-          <h1 class="d-inline">%</h1>
-        </div>
-      </div>
-    </div>
-  
-  
+    {% endfor %}
   
   </div>
     
@@ -266,10 +154,10 @@
           <td>{{gasto.data}}</td>
           <td>{{gasto.descricao}}</td>
           <td>{{gasto.valor}}</td>
-          <td>{{gasto.categoria2}}</td>
+          <td>{{gasto.categoria}}</td>
           <td>{{gasto.parcela_atual}}</td>
           <td>{{gasto.total_parcelas}}</td>
-          <td>{{gasto.cartao_id2}}</td>
+          <td>{{gasto.meio}}</td>
         </tr>
         
         

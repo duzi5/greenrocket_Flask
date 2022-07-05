@@ -1,5 +1,5 @@
 form{ 
-    background-color: rgb(223, 96, 12);
+   
     padding: 30px;
 }
 
@@ -46,7 +46,7 @@ h3{
 
 .tt{
     font-family:sans-serif;
-    font-weight: 500;
+    /* font-weight: 500; */
     
 }
 #porcat{
@@ -90,4 +90,44 @@ body{
 
 .rodape{
     height: 80px;
+}
+
+#totalgeral{ 
+    font-size: 13rem;
+    margin-top: 0;
+    font-weight: 200;
+}
+
+#labeltotal{ 
+    font-size: larger;
+    margin: 0;
+
+}
+
+h1{ 
+    font-weight: 200;
+
+}
+h3{
+    font-weight: 200;
+}
+
+.letras1{
+    font-weight: 200;
+}
+
+.linhaprimeira{
+    justify-content: space-around;
+}
+
+.botoes{
+    background-color: black;
+    color: aliceblue;
+}
+
+
+
+.linha1{
+    background-color: #000000;
+    color: aliceblue;
 }

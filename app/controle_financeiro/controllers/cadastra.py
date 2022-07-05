@@ -1,6 +1,6 @@
 from app import controle_financeiro
 
-from app.models.CategoriaModel import CategoriaModel
+from app.models.CategoriaModel import Categoria
 from app.models.MeiosModel import Meio
 from ..controllers import Controle_FinanceiroModel, request, banco, render_template, redirect, url_for, current_user
 from datetime import datetime
@@ -31,19 +31,25 @@ def cadastra(id):
        
            
         
-        print(categorias)
+      
         didi = []        
         
         for categoria in categorias:
-            regcategoria = CategoriaModel.query.filter_by(id = categoria).first()
+            regcategoria = Categoria.get_cat(categoria)
             dictcategoria = {
                 'id' : categoria,
                 'categoria' : regcategoria
             }
             didi.append(dictcategoria)
 
-        print(didi[2]['categoria'])
+       
         if request.method == "POST":
+           
+            periodo = request.form['mes'].split('-') 
+            print(periodo)
+            ano = periodo[0]
+            mes = periodo[1]*1
+
             dados = { 
                 'data' : request.form["data"],
                 'descricao' : request.form["descricao"],
@@ -51,9 +57,10 @@ def cadastra(id):
                 'categoria' : request.form["categoria"],
                 'parcela_atual' : request.form["parcela_atual"],
                 'total_parcelas' : request.form["total_parcelas"],
-                'meio' : request.form["cartoes"],
+                'meio' : request.form["meio"],
                 'usuario_control_id' : current_user.id,
-                'mes' : 7-2022,
+                'mes' : mes,
+                'ano' : ano
             }
 
             
