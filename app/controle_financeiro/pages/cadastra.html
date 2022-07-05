@@ -13,22 +13,22 @@
                 <div class="row">
                     <div class="col-4">
                         <label for="data">Data</label>
-                        <input class="form-control"type="date" name="data" id="data">
+                        <input class="form-control"type="date" name="data" id="data" required>
                     </div>
                     <div class="col-8">
                         <label for="">Descrição</label>
-                        <input class="form-control" type="text" name="descricao">
+                        <input class="form-control" type="text" name="descricao" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-4">
                         <label for="">Valor</label>
-                        <input type="decimal" name="valor"  class="form-control" id="">
+                        <input type="decimal" name="valor"  class="form-control" id="" required>
                     </div>
 
                     <div class="col-8">
                         <label for="">Categoria</label>
-                        <select name="categoria" class="form-control">
+                        <select name="categoria" class="form-control" required>
                             <option value="" desabled>Selecione</option>
                            {% for cat in didi %}
                                <option value="{{cat['id']}}">{{ cat['categoria'] }}</option>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-3">
                         <label for="">Cartão</label>
-                        <select name="meio" id="" class="form-control">
+                        <select name="meio" id="" class="form-control" required>
                             {% for meio in didi2 %}
                             <option value="{{meio['id']}}">{{meio['nome']}}</option>
                             {% endfor %}
@@ -61,7 +61,7 @@
                     </div>
                     <div class="col-3">
                         <label for="">Mês</label>
-                        <input  class = "form-control" type="month" id="start" name="mes" min="2022-06" value="{{mes}}">
+                        <input  class = "form-control" type="month" id="start" name="mes" min="2022-06" value="{{mes}}" required>
                 
                     </div>
                 

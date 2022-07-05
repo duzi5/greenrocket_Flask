@@ -3,11 +3,12 @@
 {% block content %}
 
 
+<div class="container-fluid header">
 
-<div class="container">
+<div class="container  align-items-center">
   
   <div class="row d-flex justify-content-end align-items-center linha1">
-    <div class="col-md-4 d-flex justify-content-end align-items-center">
+    <div class="col-md-4 d-flex justify-content-center align-items-center">
       <h5 class="letras1 saudacao">
         Seja
         {% if current_user.sexo == '1' %}
@@ -26,6 +27,7 @@
 
 
 </div>
+</div>
 
 
 
@@ -37,12 +39,12 @@
   <div class="row d-flex w-100 mt-3 linhaprimeira ">
    
    <div class="col-lg-9">
-     <p id="labeltotal" class="letras1">Total do período</p>
+     <span id="labeltotal" class="letras1">Total do período</span>
      <p id="totalgeral">{{totalgeral}}</p>
    </div>
      
    <div class="col-lg-3">
-     <form class="mt-5" action="{{url_for('controle_financeiro.controle_financeiro_home', id = current_user.id, mes = mes, ano = ano)}}" method="POST">
+     <form class="mt-2" action="{{url_for('controle_financeiro.controle_financeiro_home', id = current_user.id, mes = mes, ano = ano)}}" method="POST">
        <label class="letras1"for="">Mês/Ano</label>
        <h1 class="letras1">{{mes}}/{{ano}}</h1>
        <input  class = "form-control" type="month" id="start" name="mes" min="2022-06" value="">
@@ -51,17 +53,17 @@
    </div>   
   </div>
   
+  <hr>
 </div>
 
 
-<hr>
 
 <div class="container segundo">
   
   <div class="row">
     {% for m in totalmeio %}
-      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-inline">
-        <div class=" cardy bg-dark text-white mb-3 pt-4" style="max-width: 18rem;">
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+        <div class=" cardy  mb-3 pt-2 meios" style="max-width: 18rem;">
           <div class="letras1">{{m["meio"]}}</div>
           <div class="card-body">
             <h1 class="letras1">{{m["total"]}}</h1>
@@ -70,9 +72,9 @@
       </div>  
     {% endfor %}
   </div>
+  <hr>
 </div>
 
-<hr>
 
 
 <div class="container mb-3 mt-3 cat linha3 ">
@@ -82,11 +84,11 @@
   
     {% for c in totalcat%}
 
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 categoria">
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 categoria d-flex justify-content-center">
       <div class=" cardy cardy2 pt-4 pb-3  mb-3" style="max-width: 18rem;">
         <div class="nome letras1">{{ c["categoria"] }}</div>
         <div class="card-body">
-          <h3 id="b" class="letras1">{{c["total"]}} </h3>
+          <h3  class="letras1 totalclass">{{c["total"]}} </h3>
           <h1 class="letras1 d-inline">{{c["percentual"]}} </h1>
           <h1 class="letras1 d-inline">%</h1>
         </div>
@@ -96,6 +98,7 @@
   
   </div>
     
+  <hr class="linha2">
 </div>    
     
 
@@ -105,7 +108,6 @@
   
   
 
- <hr class="linha2">
 
 
 
@@ -125,8 +127,8 @@
       <div id="donutchart" style="width: 900px; height: 500px;"></div>
     </div>
   </div>
+  <hr>
 </div>
- <hr>
     
 
 
@@ -172,7 +174,7 @@
       </table>
 </div>
 
-<div class="container-fluid bg-dark rodape">
+<div class="container-fluid rodape">
 
 </div>
 

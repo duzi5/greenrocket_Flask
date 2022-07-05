@@ -74,9 +74,9 @@ body{
     
 }
 
-.segundo .cardy{
+/* .segundo .cardy{
     background-color: rgb(219, 240, 240);
-}
+} */
 
 .tite{
     color: #3a3a3a;
@@ -90,12 +90,14 @@ body{
 
 .rodape{
     height: 80px;
+    background-color: rgb(49, 49, 22);
 }
 
 #totalgeral{ 
     font-size: 13rem;
     margin-top: 0;
     font-weight: 200;
+    line-height: 80%;
 }
 
 #labeltotal{ 
@@ -128,6 +130,20 @@ h3{
 
 
 .linha1{
-    background-color: #000000;
+    background-color: rgb(49, 49, 22);
+    color: aliceblue;
+}
+
+.header{ 
+    background-color: rgb(49, 49, 22);
+    border-bottom: 3px solid rgb(226, 90, 12);
+    -webkit-box-shadow: 0px 10px 15px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 15px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 15px -8px rgba(0,0,0,0.75);
+
+}
+
+.meios{ 
+    background-color: rgb(49, 49, 22);
     color: aliceblue;
 }

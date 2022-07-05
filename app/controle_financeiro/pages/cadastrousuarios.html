@@ -9,17 +9,17 @@
 <form action="{{url_for('controle_financeiro.cadastrousuarios')}}" method="post">
     <div class="row mt-3">
         <label for=""> Username</label>
-        <input class= "form-control" type="text" name="username" id="">
+        <input class= "form-control" type="text" name="username" id="" required>
     </div>
     <div class="row mt-3">
         <div class="row ">
         <label for="">Nome</label>
-        <input class= "form-control" type="text" name="nome">
+        <input class= "form-control" type="text" name="nome" required>
     </div>
     <div class="row mt-3">
         <div class="row ">
         <label for="sexo">Sexo</label>
-        <select class= "form-control" name="sexo" id="">
+        <select class= "form-control" name="sexo" id="" required>
             <option value="0" desabled>Selecione</option>
             <option value="1">Masculino</option>
             <option value="2">Feminino</option>
@@ -93,14 +93,14 @@
         <div class="row mt-3">
             <div class="col-lg-4 ">
                 <label for="">Data de Nascimento</label>
-                <input class= "form-control"class="m-2"type="date" name = "data_nascimento">
+                <input class= "form-control"class="m-2"type="date" name = "data_nascimento" required>
             </div>
         </div>
 
         <div class="row mt-3">
             <div class="col-lg-6">
                 <label for="">Email </label>
-                <input class= "form-control" type="email" name="email">
+                <input class= "form-control" type="email" name="email" required>
             </div>
     
             <div class="col-lg-6">
@@ -111,7 +111,7 @@
         <div class="row mt-3">
             <div class="col-lg-6">
                 <label for="">Senha </label>
-                <input class= "form-control" type="password" name = "senha">
+                <input class= "form-control" type="password" name = "senha" required>
             </div>
     
             <div class="col-lg-6">
@@ -121,7 +121,7 @@
         </div>
         <div class="row mt-3">
             <label for="">Meios de pagamento</label>
-            <input class="form-control" type="text" name = "meios" placeholder="Coloque os métodos de pagamento separados por vírgulas ex: c6, Inter...">
+            <input class="form-control" type="text" name = "meios" required placeholder="Coloque os métodos de pagamento separados por vírgulas e entre aspas ex: 'c6', 'Inter'...">
         </div>
         <div class="row mt-3">
             <button class= "btn btn-primary" type="submit">Cadastrar</button>
