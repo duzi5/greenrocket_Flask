@@ -1,8 +1,12 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+
+
 .apresentacao{
     background-color: rgb(250, 246, 246);
-    width: 20pc;
-    height: 36pc;
-    margin:auto;
+    max-width: 360px;
+    max-height: 550px;
+
 
     font-size: large;
   
@@ -19,7 +23,9 @@
     margin: 0;
     padding: 0;
     width: 100vw;
-    padding: 40px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .apresentacao h1{ 
