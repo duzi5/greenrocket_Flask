@@ -32,7 +32,7 @@
     font-size: 2rem;
     text-align: center;
     padding-top: 0.5pc;
-    color: rgb(37, 32, 19);
+    color: rgb(80, 78, 74);
     font-weight: 200;
 }
 
@@ -62,4 +62,9 @@
     border-radius: 4px;
     color: rgb(109, 109, 107);
     border: white;
+}
+
+.botoes button:hover{ 
+    background-color: rgb(62, 61, 70);
+    color: whitesmoke;
 }
