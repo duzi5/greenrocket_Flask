@@ -15,6 +15,8 @@ from app.controle_financeiro.controle_financeiro import controle_financeiro
 from app.controle_financeiro.controle_financeiro import UserControl
 from flask_migrate import Migrate
 from app.ceo import ceo
+import os
+
 
 app = Flask(__name__)
 
@@ -25,7 +27,7 @@ app.register_blueprint(controle_financeiro, url_prefix="/financas")
 app.register_blueprint(ceo, url_prefix="/ceo")
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://dfkzaikcvapuga:53a950cc262dfa0976e626087e8cfc978bdc9295fcffa70acee3a06f662d4c28@ec2-52-200-215-149.compute-1.amazonaws.com:5432/d9utdggln4gbf6'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('STRING_CONEXAO')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = "nada"
 
